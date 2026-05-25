@@ -4,8 +4,10 @@ import {
   ArrowRight,
   Brain,
   CalendarDays,
+  Car,
   ClipboardCheck,
   Dumbbell,
+  Facebook,
   Flame,
   Gauge,
   Goal,
@@ -20,6 +22,7 @@ import {
   Target,
   Trophy,
   Utensils,
+  Youtube,
   Zap
 } from 'lucide-react';
 import './styles.css';
@@ -28,7 +31,6 @@ const navItems = [
   { label: 'My Story', href: '#story' },
   { label: 'Timeline', href: '#timeline' },
   { label: 'Gallery', href: '#gallery' },
-  { label: 'Behind Scenes', href: '#behind-scenes' },
   { label: 'Journal', href: '#journal' },
   { label: 'Goals', href: '#goals' },
   { label: 'Bio', href: '#bio' },
@@ -77,7 +79,7 @@ const timeline = [
   {
     icon: Flame,
     label: 'Peak Week',
-    text: 'Water, sodium, jasmine rice carb loading, and R-ALA were controlled to fill out while tightening the final look.'
+    text: 'Learning to manage water, sodium and how my body responds to the stress while tightening for the final look.'
   },
   {
     icon: Zap,
@@ -134,8 +136,22 @@ const behindScenes = [
   { icon: Dumbbell, title: 'Pump Room', text: 'Minutes before walking out. Tuning out the noise and getting blood moving with bands and controlled focus.' },
   { icon: Utensils, title: 'Meal Prep', text: 'The silent work: weighed chicken, jasmine rice math, supplement protocols, and zero missed meals.' },
   { icon: Scale, title: 'Check-ins', text: 'Photos, weight trends, conditioning reads, and adjustments that kept the package moving in the right direction.' },
+  { icon: ClipboardCheck, title: 'Competitor Meeting', text: 'Sitting in the venue before show day, taking in the stage, the banners, and the reality that the first NPC weekend was here.' },
   { icon: MessageCircle, title: 'Coach Mo', text: 'Huge gratitude to Coach Mo, a master of prep science who backed every adjustment with data.' },
-  { icon: MapPin, title: 'Grandville, MI', text: 'Grandville High School, May 23, 2026. True Novice, Masters, and Men\'s Open on the same first-show day.' }
+  {
+    icon: Sparkles,
+    title: 'Hair By Molly Young',
+    text: 'Molly Young did an amazing job getting the show-day hair dialed in before the final stretch of the weekend.',
+    href: 'https://www.instagram.com/hair_bymollyyoung/'
+  },
+  {
+    icon: Sparkles,
+    title: 'OneFitJoker Tanning',
+    text: 'Jermichael Pratt and the OneFitJoker Tanning team took great care of me on show day and helped bring the final look together.',
+    href: 'https://onefitjoker.com/'
+  },
+  { icon: Car, title: 'Road Trip', text: 'No flight, just the car ride to Grandville with the gear, meals, nerves, and show-day checklist packed in.' },
+  { icon: MapPin, title: 'Mike Vruggink', text: 'Great show by promoter Mike Vruggink, bringing the NPC Grand Rapids stage together with a professional athlete experience.' }
 ];
 
 const journalPosts = [
@@ -310,25 +326,6 @@ function Gallery() {
   );
 }
 
-function BehindScenes() {
-  return (
-    <section className="band behind" id="behind-scenes">
-      <SectionHeader title="Behind The Scenes" action={{ label: 'Read more', href: '#journal' }} />
-      <div className="behind-grid">
-        {behindScenes.map(({ icon: Icon, title, text }) => (
-          <article className="behind-card" key={title}>
-            <div className="behind-image">
-              <Icon size={30} aria-hidden="true" />
-            </div>
-            <h3>{title}</h3>
-            <p>{text}</p>
-          </article>
-        ))}
-      </div>
-    </section>
-  );
-}
-
 function Journal() {
   return (
     <section className="band journal" id="journal">
@@ -388,13 +385,38 @@ function Bio() {
           <p>
             At age 41, Chris transitioned that competitive framework into a grueling 20+ week
             contest preparation for his debut at the 2026 NPC Grand Rapids Championships. He balances
-            that pursuit with his most important role: being a dedicated father to Chelsea.
+            that pursuit with his most important role: being a dedicated father to Chelsea, who was
+            there for one of the most meaningful moments of the weekend.
           </p>
         </article>
         <aside className="credits">
           <div>
             <span>Coach</span>
             <strong>Coach Mo</strong>
+          </div>
+          <div>
+            <span>Promoter</span>
+            <strong>
+              <a href="https://www.instagram.com/vrugginkmike/" target="_blank" rel="noreferrer">Mike Vruggink</a>
+            </strong>
+          </div>
+          <div>
+            <span>Tanning</span>
+            <strong>
+              <a href="https://onefitjoker.com/" target="_blank" rel="noreferrer">Jermichael Pratt / OneFitJoker Tanning</a>
+            </strong>
+          </div>
+          <div>
+            <span>Hair</span>
+            <strong>
+              <a href="https://www.instagram.com/hair_bymollyyoung/" target="_blank" rel="noreferrer">Molly Young / @hair_bymollyyoung</a>
+            </strong>
+          </div>
+          <div>
+            <span>Stage Photography</span>
+            <strong>
+              <a href="https://www.instagram.com/stagetimephoto/" target="_blank" rel="noreferrer">Jeff Robinson / @StageTimePhoto</a>
+            </strong>
           </div>
           <div>
             <span>Competition</span>
@@ -424,16 +446,17 @@ function Contact() {
       <div>
         <h2>Let&apos;s Connect</h2>
         <ul className="socials">
-          <li><Instagram size={17} aria-hidden="true" /> Instagram</li>
-          <li><Sparkles size={17} aria-hidden="true" /> TikTok</li>
-          <li><Zap size={17} aria-hidden="true" /> X</li>
-          <li><MessageCircle size={17} aria-hidden="true" /> Facebook</li>
+          <li><a href="https://www.instagram.com/cbrennan2120" target="_blank" rel="noreferrer"><Instagram size={17} aria-hidden="true" /> Instagram</a></li>
+          <li><a href="https://www.tiktok.com/@hytrophychris" target="_blank" rel="noreferrer"><Sparkles size={17} aria-hidden="true" /> TikTok</a></li>
+          <li><a href="https://www.youtube.com/@cbrennan2120" target="_blank" rel="noreferrer"><Youtube size={17} aria-hidden="true" /> YouTube</a></li>
+          <li><a href="https://x.com/stickgod" target="_blank" rel="noreferrer"><Zap size={17} aria-hidden="true" /> X</a></li>
+          <li><a href="https://www.facebook.com/ChrisAdamBrennan" target="_blank" rel="noreferrer"><Facebook size={17} aria-hidden="true" /> Facebook</a></li>
         </ul>
       </div>
       <div>
         <h2>Collaborations</h2>
         <p>Open to content partnerships, scientifically sound supplement and apparel sponsorships, and tech or biohacking collaborations.</p>
-        <a className="button secondary compact" href="mailto:hello@example.com">Work With Me</a>
+        <a className="button secondary compact" href="mailto:cbrennan2120@gmail.com">Work With Me</a>
       </div>
     </footer>
   );
@@ -457,7 +480,6 @@ function App() {
         <Story />
         <PrepTimeline />
         <Gallery />
-        <BehindScenes />
         <Journal />
         <Goals />
         <Bio />
