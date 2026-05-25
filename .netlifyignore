@@ -1,0 +1,9 @@
+node_modules/
+dist/
+.netlify/
+incoming-photos/
+photo-review/
+*.zip
+deploy.zip
+secret.md
+*.log
