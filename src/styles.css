@@ -113,7 +113,7 @@ a {
   z-index: -1;
   background:
     linear-gradient(90deg, rgba(8, 18, 25, 0.98) 0%, rgba(8, 18, 25, 0.76) 42%, rgba(8, 18, 25, 0.38) 100%),
-    url("/assets/show/badge1-front-comparison.jpg") center / cover no-repeat;
+    url("/assets/show/badge1-hero-solo.jpg") center / cover no-repeat;
 }
 
 .hero-stage::after {
@@ -155,18 +155,7 @@ a {
 }
 
 .silhouette {
-  position: absolute;
-  right: clamp(2rem, 14vw, 12rem);
-  bottom: 11vh;
-  width: clamp(12rem, 20vw, 22rem);
-  aspect-ratio: 0.62;
-  background:
-    radial-gradient(circle at 28% 24%, #071117 0 13%, transparent 14%),
-    radial-gradient(circle at 72% 24%, #071117 0 13%, transparent 14%),
-    linear-gradient(180deg, #050c11, #111c23);
-  clip-path: polygon(45% 0, 55% 0, 61% 12%, 82% 17%, 100% 29%, 89% 39%, 72% 29%, 65% 46%, 73% 71%, 62% 100%, 52% 100%, 51% 68%, 49% 68%, 48% 100%, 38% 100%, 27% 71%, 35% 46%, 28% 29%, 11% 39%, 0 29%, 18% 17%, 39% 12%);
-  filter: drop-shadow(0 0 30px rgba(92, 245, 216, 0.22));
-  opacity: 0.92;
+  display: none;
 }
 
 .hero-content {
@@ -432,9 +421,10 @@ h1 span {
 .gallery-card img {
   display: block;
   width: 100%;
-  aspect-ratio: 3 / 2;
+  aspect-ratio: 4 / 5;
   height: auto;
-  object-fit: contain;
+  object-fit: cover;
+  object-position: center top;
   background: #050d12;
 }
 
@@ -691,7 +681,7 @@ h1 span {
   }
 
   .gallery-card img {
-    aspect-ratio: 3 / 2;
+    aspect-ratio: 4 / 5;
   }
 }
 

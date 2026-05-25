@@ -86,38 +86,38 @@ const gallery = [
   {
     title: 'Front Comparison',
     category: 'Men’s Bodybuilding',
-    caption: 'Badge 1 holding the front comparison under the lights.',
-    image: '/assets/show/badge1-front-comparison.jpg'
+    caption: 'Badge 1, cropped tight from the comparison round.',
+    image: '/assets/show/badge1-solo-front.jpg'
   },
   {
     title: 'Side Chest',
     category: 'Comparison Round',
     caption: 'A clean side pose from the first comparison callout.',
-    image: '/assets/show/badge1-side-chest.jpg'
+    image: '/assets/show/badge1-solo-side-chest.jpg'
   },
   {
     title: 'Back Double Biceps',
     category: 'Comparison Round',
     caption: 'Rear comparison with badge 1 in purple trunks.',
-    image: '/assets/show/badge1-back-double.jpg'
+    image: '/assets/show/badge1-solo-back-double.jpg'
   },
   {
     title: 'Ab And Thigh',
     category: 'Comparison Round',
     caption: 'Locked in during the ab and thigh call.',
-    image: '/assets/show/badge1-ab-thigh.jpg'
+    image: '/assets/show/badge1-solo-ab-thigh.jpg'
   },
   {
     title: 'Most Muscular',
     category: 'Comparison Round',
     caption: 'Finishing the callout with a hard squeeze.',
-    image: '/assets/show/badge1-most-muscular.jpg'
+    image: '/assets/show/badge1-solo-most-muscular.jpg'
   },
   {
     title: 'Side Profile',
     category: 'Comparison Round',
     caption: 'Profile view from the opening comparison.',
-    image: '/assets/show/badge1-side-profile.jpg'
+    image: '/assets/show/badge1-solo-profile.jpg'
   }
 ];
 
