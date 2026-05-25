@@ -5,3 +5,6 @@ dist/
 .env.*
 *.log
 Unconfirmed *.crdownload
+*.zip
+incoming-photos/
+photo-review/

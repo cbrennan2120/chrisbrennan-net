@@ -83,12 +83,42 @@ const timeline = [
 ];
 
 const gallery = [
-  ['Front Lat Spread', 'Open Class', 'First time feeling the stage lights.'],
-  ['Side Chest', 'Open Class', 'Control, breathing, and patience in the pose.'],
-  ['Back Double Biceps', 'Open Class', 'The pose that showed the work from every angle.'],
-  ['Classic Physique', 'Routine Moment', 'A clean frame, steady hands, and full focus.'],
-  ['Side Triceps', 'Open Class', 'Dialing in details under pressure.'],
-  ['Back Lat Spread', 'Open Class', 'A benchmark for the next offseason.']
+  {
+    title: 'Front Comparison',
+    category: 'Men’s Bodybuilding',
+    caption: 'Holding the front pose next to the lineup.',
+    image: '/assets/show/front-relaxed.jpg'
+  },
+  {
+    title: 'Side Chest',
+    category: 'Comparison Round',
+    caption: 'Staying tight while the judges moved through the callouts.',
+    image: '/assets/show/side-chest.jpg'
+  },
+  {
+    title: 'Back Double Biceps',
+    category: 'Comparison Round',
+    caption: 'The back shot that showed the work from every angle.',
+    image: '/assets/show/back-double.jpg'
+  },
+  {
+    title: 'Side Lineup',
+    category: 'Stage Callout',
+    caption: 'A lineup moment with the full class under the lights.',
+    image: '/assets/show/side-lineup.jpg'
+  },
+  {
+    title: 'Most Muscular',
+    category: 'Comparison Round',
+    caption: 'A hard squeeze in one of the most intense poses.',
+    image: '/assets/show/most-muscular.jpg'
+  },
+  {
+    title: 'Back Lineup',
+    category: 'Stage Callout',
+    caption: 'Holding the rear comparison with the class.',
+    image: '/assets/show/back-lineup.jpg'
+  }
 ];
 
 const behindScenes = [
@@ -203,13 +233,11 @@ function PrepTimeline() {
   );
 }
 
-function GalleryCard({ item, index }) {
-  const [title, category, caption] = item;
+function GalleryCard({ item }) {
+  const { title, category, caption, image } = item;
   return (
     <figure className="gallery-card">
-      <div className={`placeholder pose-${index + 1}`}>
-        <Dumbbell size={34} aria-hidden="true" />
-      </div>
+      <img src={image} alt={`${title} - ${category}`} loading="lazy" />
       <figcaption>
         <strong>{title}</strong>
         <span>{category}</span>
@@ -225,7 +253,7 @@ function Gallery() {
       <SectionHeader title="Featured Competition Gallery" action={{ label: 'View full gallery', href: '#contact' }} />
       <div className="gallery-grid">
         {gallery.map((item, index) => (
-          <GalleryCard key={item[0]} item={item} index={index} />
+          <GalleryCard key={item.title} item={item} index={index} />
         ))}
       </div>
     </section>
