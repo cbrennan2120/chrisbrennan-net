@@ -113,7 +113,7 @@ a {
   z-index: -1;
   background:
     linear-gradient(90deg, rgba(8, 18, 25, 0.98) 0%, rgba(8, 18, 25, 0.76) 42%, rgba(8, 18, 25, 0.38) 100%),
-    url("/assets/show/front-relaxed.jpg") center / cover no-repeat;
+    url("/assets/show/badge1-front-comparison.jpg") center / cover no-repeat;
 }
 
 .hero-stage::after {

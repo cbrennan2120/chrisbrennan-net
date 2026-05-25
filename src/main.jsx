@@ -86,38 +86,38 @@ const gallery = [
   {
     title: 'Front Comparison',
     category: 'Men’s Bodybuilding',
-    caption: 'Holding the front pose next to the lineup.',
-    image: '/assets/show/front-relaxed.jpg'
+    caption: 'Badge 1 holding the front comparison under the lights.',
+    image: '/assets/show/badge1-front-comparison.jpg'
   },
   {
     title: 'Side Chest',
     category: 'Comparison Round',
-    caption: 'Staying tight while the judges moved through the callouts.',
-    image: '/assets/show/side-chest.jpg'
+    caption: 'A clean side pose from the first comparison callout.',
+    image: '/assets/show/badge1-side-chest.jpg'
   },
   {
     title: 'Back Double Biceps',
     category: 'Comparison Round',
-    caption: 'The back shot that showed the work from every angle.',
-    image: '/assets/show/back-double.jpg'
+    caption: 'Rear comparison with badge 1 in purple trunks.',
+    image: '/assets/show/badge1-back-double.jpg'
   },
   {
-    title: 'Side Lineup',
-    category: 'Stage Callout',
-    caption: 'A lineup moment with the full class under the lights.',
-    image: '/assets/show/side-lineup.jpg'
+    title: 'Ab And Thigh',
+    category: 'Comparison Round',
+    caption: 'Locked in during the ab and thigh call.',
+    image: '/assets/show/badge1-ab-thigh.jpg'
   },
   {
     title: 'Most Muscular',
     category: 'Comparison Round',
-    caption: 'A hard squeeze in one of the most intense poses.',
-    image: '/assets/show/most-muscular.jpg'
+    caption: 'Finishing the callout with a hard squeeze.',
+    image: '/assets/show/badge1-most-muscular.jpg'
   },
   {
-    title: 'Back Lineup',
-    category: 'Stage Callout',
-    caption: 'Holding the rear comparison with the class.',
-    image: '/assets/show/back-lineup.jpg'
+    title: 'Side Profile',
+    category: 'Comparison Round',
+    caption: 'Profile view from the opening comparison.',
+    image: '/assets/show/badge1-side-profile.jpg'
   }
 ];
 
