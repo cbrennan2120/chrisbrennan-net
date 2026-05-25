@@ -11,10 +11,10 @@ import {
   Goal,
   HeartPulse,
   Instagram,
+  MapPin,
   Medal,
   MessageCircle,
   Mountain,
-  Plane,
   Scale,
   Sparkles,
   Target,
@@ -24,116 +24,154 @@ import {
 } from 'lucide-react';
 import './styles.css';
 
-const navItems = ['My Story', 'Timeline', 'Gallery', 'Behind Scenes', 'Journal', 'Goals', 'Contact'];
+const navItems = [
+  { label: 'My Story', href: '#story' },
+  { label: 'Timeline', href: '#timeline' },
+  { label: 'Gallery', href: '#gallery' },
+  { label: 'Behind Scenes', href: '#behind-scenes' },
+  { label: 'Journal', href: '#journal' },
+  { label: 'Goals', href: '#goals' },
+  { label: 'Bio', href: '#bio' },
+  { label: 'Contact', href: '#contact' }
+];
 
 const storyPillars = [
   {
     icon: Target,
     title: 'Why I Started',
-    text: 'I wanted a challenge that demanded discipline, purpose, and proof that daily standards compound.'
+    text: 'After years of execution in esports and high-volume retail, turning 41 became the catalyst to stop wondering what if and test the limits.'
   },
   {
     icon: Mountain,
-    title: 'The Challenges',
-    text: 'Long days, low energy, plateaus, and learning how to stay consistent when life kept moving.'
+    title: 'The Hardest Part',
+    text: 'Mental fatigue in the final weeks: low energy, brain fog, work responsibility, and still showing up fully as Chelsea\'s dad.'
   },
   {
     icon: Brain,
-    title: 'Mindset Shifts',
-    text: 'Prep taught patience, trust in the process, and how identity is built through repeated action.'
+    title: 'Mindset Shift',
+    text: 'I shifted from working hard to executing with mechanical precision: nutrition, training, recovery, and every variable treated as data.'
   },
   {
     icon: Trophy,
-    title: 'What I Learned',
-    text: 'The stage was the moment, but the real win was becoming someone I could be proud of every day.'
+    title: 'What It Meant',
+    text: 'Standing under the lights at Grandville High School validated a 20+ week silent battle built on structure, science, and suffering.'
   }
 ];
 
 const timeline = [
   {
     icon: Dumbbell,
-    label: '12-8 Weeks Out',
-    text: 'Foundation work, training intensity, cardio discipline, and consistent check-ins.'
+    label: '20+ Week Prep',
+    text: 'Contest prep became a long, controlled build toward the 2026 NPC Grand Rapids Championships.'
   },
   {
     icon: ClipboardCheck,
-    label: '8-4 Weeks Out',
-    text: 'Nutrition locked in, posing practice sharpened, and the routine became automatic.'
+    label: 'Training Split',
+    text: 'High-intensity, data-tracked hypertrophy work focused on progressive overload while Coach Mo managed lean tissue retention.'
   },
   {
     icon: HeartPulse,
-    label: '4-2 Weeks Out',
-    text: 'Details mattered more: recovery, weak-point focus, conditioning, and presentation.'
+    label: 'Cardio Changes',
+    text: 'Fasted steady-state cardio scaled upward as needed to break metabolic plateaus and sharpen conditioning.'
   },
   {
     icon: Flame,
     label: 'Peak Week',
-    text: 'Lower volume, tighter focus, careful execution, and staying calm under pressure.'
+    text: 'Water, sodium, jasmine rice carb loading, and R-ALA were controlled to fill out while tightening the final look.'
   },
   {
     icon: Zap,
     label: 'Show Day',
-    text: 'Pump up, tan, stage lights, and turning months of prep into one clear moment.'
+    text: 'May 23, 2026: Pro Tan, bands backstage, and the focus before walking out for True Novice, Masters, and Men\'s Open.'
   },
   {
     icon: Medal,
-    label: 'On Stage',
-    text: 'A first-show memory and the first real benchmark for the next version.'
+    label: 'First Benchmark',
+    text: 'The stage became the first real standard for the next version: more thickness, better shape, and smarter execution.'
   }
 ];
 
 const gallery = [
   {
-    title: 'Front Comparison',
-    category: 'Men’s Bodybuilding',
-    caption: 'Badge 1, cropped tight from the comparison round.',
+    title: 'Front Double Biceps',
+    category: 'True Novice / Masters',
+    caption: 'Locking in the front double. Twenty weeks of posing drills finally clicking into place.',
     image: '/assets/show/badge1-solo-front.jpg'
   },
   {
     title: 'Side Chest',
-    category: 'Comparison Round',
-    caption: 'A clean side pose from the first comparison callout.',
+    category: 'Prejudging Comparison',
+    caption: 'Conditioning check. Deep lines and peak-week fullness under the judges\' lights.',
     image: '/assets/show/badge1-solo-side-chest.jpg'
   },
   {
     title: 'Back Double Biceps',
-    category: 'Comparison Round',
-    caption: 'Rear comparison with badge 1 in purple trunks.',
+    category: 'Rear Mandatory',
+    caption: 'Back details holding strong. Bringing the best possible package to my first NPC stage.',
     image: '/assets/show/badge1-solo-back-double.jpg'
   },
   {
     title: 'Ab And Thigh',
-    category: 'Comparison Round',
-    caption: 'Locked in during the ab and thigh call.',
+    category: 'Mandatory Pose',
+    caption: 'Final-week conditioning on display after months of precise meals, cardio, and posing work.',
     image: '/assets/show/badge1-solo-ab-thigh.jpg'
   },
   {
     title: 'Most Muscular',
-    category: 'Comparison Round',
-    caption: 'Finishing the callout with a hard squeeze.',
+    category: 'Final Comparison',
+    caption: 'Pushing through the last callout with every detail squeezed out under the lights.',
     image: '/assets/show/badge1-solo-most-muscular.jpg'
   },
   {
     title: 'Side Profile',
-    category: 'Comparison Round',
-    caption: 'Profile view from the opening comparison.',
+    category: 'Stage Presence',
+    caption: 'A first-show moment where the nerves settled and the work started speaking for itself.',
     image: '/assets/show/badge1-solo-profile.jpg'
   }
 ];
 
 const behindScenes = [
-  { icon: Utensils, title: 'Meals', text: 'Prep meals, tracking, sodium, water, and the boring parts that worked.' },
-  { icon: Dumbbell, title: 'Pump Room', text: 'Bands, focus, nerves, and the minutes before stepping out.' },
-  { icon: Scale, title: 'Check-ins', text: 'Photos, weight trends, adjustments, and coach feedback.' },
-  { icon: MessageCircle, title: 'Coach Moments', text: 'The conversations that kept the plan clear and the mindset steady.' },
-  { icon: Plane, title: 'Travel & Show Day', text: 'Packing, logistics, backstage timing, and staying ready.' }
+  { icon: Dumbbell, title: 'Pump Room', text: 'Minutes before walking out. Tuning out the noise and getting blood moving with bands and controlled focus.' },
+  { icon: Utensils, title: 'Meal Prep', text: 'The silent work: weighed chicken, jasmine rice math, supplement protocols, and zero missed meals.' },
+  { icon: Scale, title: 'Check-ins', text: 'Photos, weight trends, conditioning reads, and adjustments that kept the package moving in the right direction.' },
+  { icon: MessageCircle, title: 'Coach Mo', text: 'Huge gratitude to Coach Mo, a master of prep science who backed every adjustment with data.' },
+  { icon: MapPin, title: 'Grandville, MI', text: 'Grandville High School, May 23, 2026. True Novice, Masters, and Men\'s Open on the same first-show day.' }
 ];
 
 const journalPosts = [
-  ['What I’d Do Differently', 'The lessons I learned the hard way and what I would change next time.'],
-  ['Lessons From Prep', 'Discipline, patience, hunger, and showing up when motivation faded.'],
-  ['Post-Show Reflections', 'What it felt like after the tan faded and the stage lights went off.'],
-  ['How Bodybuilding Changed Me', 'More than a physique, it changed my standards and identity.']
+  {
+    title: 'First Show Recap',
+    kicker: 'The NPC Grand Rapids Championships',
+    text: 'Two days after stepping onto the NPC Grand Rapids stage, the experience still feels unmatched. Men\'s Open, Masters, and True Novice turned months of tracking, low-energy workdays, fatherhood, and quiet sacrifice into one finished product.'
+  },
+  {
+    title: 'Lessons From Prep',
+    kicker: 'The Science Of The Shred',
+    text: 'Bodybuilding became an optimization problem. Coming from competitive gaming and retail leadership, I treated prep like an N=1 study: carbohydrate timing, recovery markers, insulin sensitivity, and metabolic efficiency all had to earn their place.'
+  },
+  {
+    title: 'Post-Show Transition',
+    kicker: 'Rebuilding The Engine',
+    text: 'The tan is fading, but the work has not stopped. The next phase is controlled metabolic recovery, a structured reverse diet, and targeted growth without letting the post-show window turn into chaos.'
+  }
+];
+
+const goals = [
+  {
+    icon: Gauge,
+    title: 'Physique Improvements',
+    text: 'Build overall muscle thickness with special focus on back density and shoulder width to maximize the V-taper in Men\'s Open.'
+  },
+  {
+    icon: Goal,
+    title: 'Offseason Priorities',
+    text: 'Restore baseline metabolic and hormone health, then move into a sustained surplus built for clean tissue accretion.'
+  },
+  {
+    icon: HeartPulse,
+    title: 'Nutrition & Recovery',
+    text: 'Keep the focus on cellular optimization, gut health, sleep hygiene, and precise protocols that support nutrient partitioning.'
+  }
 ];
 
 function BrandLogo() {
@@ -168,7 +206,6 @@ function Hero() {
       <div className="hero-stage" aria-hidden="true">
         <div className="stage-lights" />
         <div className="stage-floor" />
-        <div className="silhouette" />
       </div>
       <div className="hero-content">
         <h1>
@@ -176,7 +213,10 @@ function Hero() {
           <span>To First Stage</span>
         </h1>
         <div className="pulse-line" aria-hidden="true" />
-        <p>The journey to my first bodybuilding show.</p>
+        <p>
+          20 years in pet retail management, a lifetime in competitive gaming, and 20+ weeks of
+          relentless execution to transition from the desk to the NPC Masters and Men&apos;s Open stage.
+        </p>
         <div className="hero-actions">
           <a className="button primary" href="#story">My Story</a>
           <a className="button secondary" href="#gallery">View Gallery</a>
@@ -194,12 +234,22 @@ function Story() {
     <section className="band story" id="story">
       <div className="section-copy">
         <SectionHeader title="My Story" />
-        <p className="lead">This is not just about stepping on stage. It is about who I became in the process.</p>
-        <p>
-          From early morning workouts to late-night meals, the doubts, the discipline, and the mindset shifts changed
-          everything. This is the story behind the first show.
+        <p className="lead">
+          This was not a bucket-list item. It was a 20+ week test of discipline, fatherhood,
+          leadership, and data-driven execution.
         </p>
-        <a className="button secondary compact" href="#journal">Read the Story</a>
+        <p>
+          Before prep, training was a passion layered into a life built around managing a busy Pet
+          Supplies Plus store and being a father to my 11-year-old daughter, Chelsea. Prep changed
+          the entire operating system: every meal, check-in, cardio session, and posing drill became
+          part of a controlled experiment.
+        </p>
+        <p>
+          My background as a former professional cyberathlete shaped the approach. I treated
+          bodybuilding like competitive strategy in physical form, using precision, metabolic
+          efficiency, and repeatable execution instead of guesswork.
+        </p>
+        <a className="button secondary compact" href="#journal">Read the Journal</a>
       </div>
       <div className="pillar-grid">
         {storyPillars.map(({ icon: Icon, title, text }) => (
@@ -250,10 +300,10 @@ function GalleryCard({ item }) {
 function Gallery() {
   return (
     <section className="band gallery-section" id="gallery">
-      <SectionHeader title="Featured Competition Gallery" action={{ label: 'View full gallery', href: '#contact' }} />
+      <SectionHeader title="Featured Competition Gallery" action={{ label: 'Contact', href: '#contact' }} />
       <div className="gallery-grid">
-        {gallery.map((item, index) => (
-          <GalleryCard key={item.title} item={item} index={index} />
+        {gallery.map((item) => (
+          <GalleryCard key={item.title} item={item} />
         ))}
       </div>
     </section>
@@ -263,7 +313,7 @@ function Gallery() {
 function BehindScenes() {
   return (
     <section className="band behind" id="behind-scenes">
-      <SectionHeader title="Behind The Scenes" action={{ label: 'View more', href: '#journal' }} />
+      <SectionHeader title="Behind The Scenes" action={{ label: 'Read more', href: '#journal' }} />
       <div className="behind-grid">
         {behindScenes.map(({ icon: Icon, title, text }) => (
           <article className="behind-card" key={title}>
@@ -282,15 +332,15 @@ function BehindScenes() {
 function Journal() {
   return (
     <section className="band journal" id="journal">
-      <SectionHeader title="Journal" action={{ label: 'Read all posts', href: '#contact' }} />
+      <SectionHeader title="Journal" />
       <div className="journal-grid">
-        {journalPosts.map(([title, text], index) => (
+        {journalPosts.map(({ title, kicker, text }, index) => (
           <article className="journal-card" key={title}>
             <CalendarDays size={30} aria-hidden="true" />
             <span>Entry 0{index + 1}</span>
             <h3>{title}</h3>
+            <h4>{kicker}</h4>
             <p>{text}</p>
-            <a href="#contact">Read more <ArrowRight size={14} aria-hidden="true" /></a>
           </article>
         ))}
       </div>
@@ -299,12 +349,6 @@ function Journal() {
 }
 
 function Goals() {
-  const goals = [
-    { icon: Goal, title: 'Next Show', text: 'New division, new stage, and a better version of the same standard.' },
-    { icon: Gauge, title: 'Improvements', text: 'More size, sharper symmetry, stronger posing, and cleaner conditioning.' },
-    { icon: Dumbbell, title: 'Offseason Focus', text: 'Build, recover, learn, and come back stronger.' }
-  ];
-
   return (
     <section className="band goals" id="goals">
       <SectionHeader title="Future Goals" />
@@ -323,15 +367,62 @@ function Goals() {
   );
 }
 
+function Bio() {
+  return (
+    <section className="band bio" id="bio">
+      <SectionHeader title="Bio & Credits" />
+      <div className="bio-layout">
+        <article>
+          <h3>Chris Brennan</h3>
+          <p className="lead">
+            Chris Brennan is a competitive NPC bodybuilder, former professional cyberathlete, and
+            veteran pet retail manager based in Portage, Michigan.
+          </p>
+          <p>
+            For over two decades, Chris has operated in high-execution environments. As a veteran
+            store manager at Pet Supplies Plus, he has mastered operational efficiency, leadership,
+            and logistical execution. Long before stepping onto the bodybuilding stage, he honed his
+            competitive drive in the digital arena, learning that elite performance requires
+            obsession, analysis, and acute attention to detail.
+          </p>
+          <p>
+            At age 41, Chris transitioned that competitive framework into a grueling 20+ week
+            contest preparation for his debut at the 2026 NPC Grand Rapids Championships. He balances
+            that pursuit with his most important role: being a dedicated father to Chelsea.
+          </p>
+        </article>
+        <aside className="credits">
+          <div>
+            <span>Coach</span>
+            <strong>Coach Mo</strong>
+          </div>
+          <div>
+            <span>Competition</span>
+            <strong>NPC Grand Rapids Championships</strong>
+          </div>
+          <div>
+            <span>Date</span>
+            <strong>May 23, 2026</strong>
+          </div>
+          <div>
+            <span>Location</span>
+            <strong>Grandville High School, Grandville, MI</strong>
+          </div>
+        </aside>
+      </div>
+    </section>
+  );
+}
+
 function Contact() {
   return (
     <footer className="site-footer" id="contact">
       <div>
         <BrandLogo />
-        <p>Discipline. Dedication. Evolution. This is just the beginning.</p>
+        <p>Documentary, polished, dark, and high contrast. The gritty reality of the sport, presented with data-driven professionalism.</p>
       </div>
       <div>
-        <h2>Let’s Connect</h2>
+        <h2>Let&apos;s Connect</h2>
         <ul className="socials">
           <li><Instagram size={17} aria-hidden="true" /> Instagram</li>
           <li><Sparkles size={17} aria-hidden="true" /> TikTok</li>
@@ -341,7 +432,7 @@ function Contact() {
       </div>
       <div>
         <h2>Collaborations</h2>
-        <p>Open to coaching, partnerships, sponsorships, and projects aligned with the mission.</p>
+        <p>Open to content partnerships, scientifically sound supplement and apparel sponsorships, and tech or biohacking collaborations.</p>
         <a className="button secondary compact" href="mailto:hello@example.com">Work With Me</a>
       </div>
     </footer>
@@ -354,9 +445,9 @@ function App() {
       <header className="site-header">
         <BrandLogo />
         <nav aria-label="Primary navigation">
-          {navItems.map((item) => (
-            <a key={item} href={`#${item.toLowerCase().replaceAll(' ', '-')}`}>
-              {item}
+          {navItems.map(({ label, href }) => (
+            <a key={label} href={href}>
+              {label}
             </a>
           ))}
         </nav>
@@ -369,6 +460,7 @@ function App() {
         <BehindScenes />
         <Journal />
         <Goals />
+        <Bio />
       </main>
       <Contact />
     </>
