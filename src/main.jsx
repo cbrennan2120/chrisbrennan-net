@@ -392,7 +392,15 @@ function Bio() {
         <aside className="credits">
           <div>
             <span>Coach</span>
-            <strong>Coach Mo</strong>
+            <strong>
+              <a href="https://www.instagram.com/alfaraj7134/" target="_blank" rel="noreferrer">Coach Mo / @alfaraj7134</a>
+            </strong>
+          </div>
+          <div>
+            <span>Gym</span>
+            <strong>
+              <a href="https://www.instagram.com/hocgym2024/" target="_blank" rel="noreferrer">House of Champions Gym / @hocgym2024</a>
+            </strong>
           </div>
           <div>
             <span>Promoter</span>
