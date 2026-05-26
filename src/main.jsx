@@ -98,25 +98,25 @@ const gallery = [
     title: 'Front Double Biceps',
     category: 'True Novice / Masters',
     caption: 'Locking in the front double. Twenty weeks of posing drills finally clicking into place.',
-    image: '/assets/show/badge1-solo-front.jpg'
+    image: '/assets/show/badge1-solo-front-double.jpg'
   },
   {
     title: 'Side Chest',
     category: 'Prejudging Comparison',
-    caption: 'Conditioning check. Deep lines and peak-week fullness under the judges\' lights.',
+    caption: 'One of the strongest poses from the day: chest high, legs locked in, and the stage look starting to click.',
     image: '/assets/show/badge1-solo-side-chest.jpg'
+  },
+  {
+    title: 'Side Triceps',
+    category: 'Prejudging Comparison',
+    caption: 'A tight side shot showing the triceps, shoulder, and oblique detail under the judges\' lights.',
+    image: '/assets/show/badge1-solo-side-triceps.jpg'
   },
   {
     title: 'Back Double Biceps',
     category: 'Rear Mandatory',
     caption: 'Back details holding strong. Bringing the best possible package to my first NPC stage.',
     image: '/assets/show/badge1-solo-back-double.jpg'
-  },
-  {
-    title: 'Ab And Thigh',
-    category: 'Mandatory Pose',
-    caption: 'Final-week conditioning on display after months of precise meals, cardio, and posing work.',
-    image: '/assets/show/badge1-solo-ab-thigh.jpg'
   },
   {
     title: 'Most Muscular',
@@ -317,7 +317,7 @@ function Gallery() {
   return (
     <section className="band gallery-section" id="gallery">
       <SectionHeader title="Featured Competition Gallery" action={{ label: 'Contact', href: '#contact' }} />
-      <div className="gallery-grid">
+      <div className={`gallery-grid gallery-count-${gallery.length}`}>
         {gallery.map((item) => (
           <GalleryCard key={item.title} item={item} />
         ))}

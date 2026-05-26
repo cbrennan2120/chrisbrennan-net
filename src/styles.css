@@ -410,6 +410,22 @@ h1 span {
   gap: 1rem;
 }
 
+.gallery-grid.gallery-count-5 {
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+}
+
+.gallery-grid.gallery-count-5 .gallery-card {
+  grid-column: span 2;
+}
+
+.gallery-grid.gallery-count-5 .gallery-card:nth-child(4) {
+  grid-column: 2 / span 2;
+}
+
+.gallery-grid.gallery-count-5 .gallery-card:nth-child(5) {
+  grid-column: 4 / span 2;
+}
+
 .gallery-card {
   position: relative;
   margin: 0;
@@ -728,6 +744,10 @@ h1 span {
   .journal-grid,
   .goal-grid {
     grid-template-columns: 1fr;
+  }
+
+  .gallery-grid.gallery-count-5 .gallery-card {
+    grid-column: auto;
   }
 
   h1 {
