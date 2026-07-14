@@ -456,7 +456,7 @@ function Contact() {
         <h2>Let&apos;s Connect</h2>
         <ul className="socials">
           <li><a href="https://www.instagram.com/cbrennan2120" target="_blank" rel="noreferrer"><Instagram size={17} aria-hidden="true" /> Instagram</a></li>
-          <li><a href="https://www.tiktok.com/@hytrophychris" target="_blank" rel="noreferrer"><Sparkles size={17} aria-hidden="true" /> TikTok</a></li>
+          <li><a href="https://www.tiktok.com/@hypertrophychris" target="_blank" rel="noreferrer"><Sparkles size={17} aria-hidden="true" /> TikTok</a></li>
           <li><a href="https://www.youtube.com/@cbrennan2120" target="_blank" rel="noreferrer"><Youtube size={17} aria-hidden="true" /> YouTube</a></li>
           <li><a href="https://x.com/stickgod" target="_blank" rel="noreferrer"><Zap size={17} aria-hidden="true" /> X</a></li>
           <li><a href="https://www.facebook.com/ChrisAdamBrennan" target="_blank" rel="noreferrer"><Facebook size={17} aria-hidden="true" /> Facebook</a></li>

@@ -22,8 +22,8 @@ const socialLinks = [
   },
   {
     label: 'TikTok',
-    handle: '@hytrophychris',
-    href: 'https://www.tiktok.com/@hytrophychris',
+    handle: '@hypertrophychris',
+    href: 'https://www.tiktok.com/@hypertrophychris',
     icon: Music2
   },
   {
