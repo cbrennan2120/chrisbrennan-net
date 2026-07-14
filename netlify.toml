@@ -13,6 +13,16 @@ to = "/bodybuilding/index.html"
 status = 200
 
 [[redirects]]
+from = "/esports"
+to = "/esports/"
+status = 301
+
+[[redirects]]
+from = "/esports/*"
+to = "/esports/index.html"
+status = 200
+
+[[redirects]]
 from = "/*"
 to = "/index.html"
 status = 200
