@@ -86,6 +86,13 @@ function Centerpiece() {
             fetchPriority="high"
           />
         </picture>
+        <a
+          className="engineer-hotspot"
+          href="/esports/"
+          aria-label="Open Chris Brennan's st1ckg0d esports career history"
+        >
+          <span aria-hidden="true">PLAYER 1 // ESPORTS BIO</span>
+        </a>
       </div>
       <div className="mission-panel">
         <div className="terminal-copy">
