@@ -3,6 +3,16 @@ command = "npm run build"
 publish = "dist"
 
 [[redirects]]
+from = "/bodybuilding"
+to = "/bodybuilding/"
+status = 301
+
+[[redirects]]
+from = "/bodybuilding/*"
+to = "/bodybuilding/index.html"
+status = 200
+
+[[redirects]]
 from = "/*"
 to = "/index.html"
 status = 200
