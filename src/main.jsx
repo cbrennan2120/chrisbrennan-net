@@ -2,6 +2,7 @@ import React from 'react';
 import { createRoot } from 'react-dom/client';
 import {
   ArrowUpRight,
+  Dumbbell,
   Facebook,
   Instagram,
   Mail,
@@ -101,6 +102,27 @@ function Centerpiece() {
   );
 }
 
+function BodybuildingPortal() {
+  return (
+    <section className="bodybuilding-portal" aria-labelledby="bodybuilding-title">
+      <div className="bodybuilding-photo" aria-hidden="true" />
+      <div className="bodybuilding-copy">
+        <span className="eyebrow">The stage files</span>
+        <h2 id="bodybuilding-title">Chris Brennan Bodybuilding</h2>
+        <p>
+          The complete first-show story, competition gallery, prep timeline, journal, and future
+          physique goals now have a dedicated home.
+        </p>
+        <a className="bodybuilding-link" href="/bodybuilding/">
+          <Dumbbell aria-hidden="true" />
+          Enter the bodybuilding page
+          <ArrowUpRight aria-hidden="true" />
+        </a>
+      </div>
+    </section>
+  );
+}
+
 function SocialBoard() {
   return (
     <section className="social-section" aria-labelledby="follow-title">
@@ -147,6 +169,7 @@ function App() {
       <Header />
       <main>
         <Centerpiece />
+        <BodybuildingPortal />
         <SocialBoard />
       </main>
       <footer>

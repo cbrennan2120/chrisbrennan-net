@@ -271,6 +271,81 @@ a {
   line-height: 1.55;
 }
 
+.bodybuilding-portal {
+  display: grid;
+  grid-template-columns: minmax(260px, 0.72fr) minmax(0, 1.28fr);
+  width: min(1180px, calc(100% - clamp(1.4rem, 8vw, 8rem)));
+  min-height: 310px;
+  margin: clamp(3.5rem, 8vw, 6.5rem) auto 0;
+  overflow: hidden;
+  border: 1px solid rgba(181, 135, 80, 0.5);
+  border-left: 7px solid var(--orange);
+  background: var(--steel-deep);
+  box-shadow: 0 18px 35px rgba(0, 0, 0, 0.5), inset 0 0 0 2px rgba(0, 0, 0, 0.45);
+}
+
+.bodybuilding-photo {
+  min-height: 310px;
+  background:
+    linear-gradient(90deg, transparent 55%, var(--steel-deep)),
+    linear-gradient(180deg, rgba(8, 10, 10, 0.05), rgba(8, 10, 10, 0.42)),
+    url('/assets/show/badge1-hero-solo.jpg') center 17% / cover no-repeat;
+}
+
+.bodybuilding-copy {
+  align-self: center;
+  padding: clamp(1.6rem, 4vw, 3.5rem);
+}
+
+.bodybuilding-copy .eyebrow {
+  color: var(--terminal);
+}
+
+.bodybuilding-copy h2 {
+  max-width: 12ch;
+  margin: 0.35rem 0 0;
+  color: var(--cream);
+  font-size: clamp(2.2rem, 5vw, 4.1rem);
+  font-weight: 900;
+  letter-spacing: 0.02em;
+  line-height: 0.88;
+  text-transform: uppercase;
+}
+
+.bodybuilding-copy p {
+  max-width: 620px;
+  margin: 1.2rem 0 1.5rem;
+  color: #c3b9a8;
+  font-size: clamp(1rem, 1.8vw, 1.16rem);
+  line-height: 1.55;
+}
+
+.bodybuilding-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  min-height: 48px;
+  padding: 0.8rem 1rem;
+  color: #170e08;
+  border: 1px solid #ffd09a;
+  background: linear-gradient(#f69543, #ce551d);
+  box-shadow: 3px 4px 0 #3b1a0d;
+  font-weight: 900;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  transition: transform 140ms ease, box-shadow 140ms ease;
+}
+
+.bodybuilding-link:hover,
+.bodybuilding-link:focus-visible {
+  transform: translate(2px, 2px);
+  box-shadow: 1px 2px 0 #3b1a0d;
+}
+
+.bodybuilding-link svg:last-child {
+  width: 18px;
+}
+
 .social-section {
   padding: clamp(3.5rem, 8vw, 7rem) clamp(1rem, 4vw, 4rem) clamp(3rem, 7vw, 6rem);
 }
@@ -500,6 +575,15 @@ footer {
     gap: 1rem;
   }
 
+  .bodybuilding-portal {
+    grid-template-columns: 1fr;
+  }
+
+  .bodybuilding-photo {
+    min-height: 260px;
+    background-position: center 14%;
+  }
+
   .social-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -554,6 +638,29 @@ footer {
 
   .social-section {
     padding-inline: 0.7rem;
+  }
+
+  .bodybuilding-portal {
+    width: calc(100% - 1.4rem);
+    min-height: 0;
+  }
+
+  .bodybuilding-photo {
+    min-height: 220px;
+    background:
+      linear-gradient(180deg, transparent 52%, var(--steel-deep)),
+      linear-gradient(180deg, rgba(8, 10, 10, 0.04), rgba(8, 10, 10, 0.3)),
+      url('/assets/show/badge1-hero-solo.jpg') center 14% / cover no-repeat;
+  }
+
+  .bodybuilding-copy {
+    padding: 1.25rem;
+  }
+
+  .bodybuilding-link {
+    justify-content: center;
+    width: 100%;
+    font-size: 0.83rem;
   }
 
   .section-plate {
