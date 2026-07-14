@@ -7,7 +7,6 @@ import {
   Instagram,
   Mail,
   Music2,
-  PawPrint,
   Wrench,
   Youtube,
   Zap
@@ -124,30 +123,32 @@ function BodybuildingPortal() {
   );
 }
 
-function FunProjects() {
+function Projects() {
   return (
     <section className="project-bay" aria-labelledby="projects-title">
-      <div className="project-bay-heading">
-        <span className="eyebrow">Fun project // live</span>
-        <h2 id="projects-title">Built in ChrisSpace</h2>
+      <h2 id="projects-title">My Projects</h2>
+      <div className="project-grid">
+        <a
+          className="project-card"
+          href="https://potty.chrisbrennan.net/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <span className="project-icon" aria-hidden="true">💩</span>
+          <span className="project-copy">
+            <small>Human health tracker</small>
+            <strong>Poop Tracker</strong>
+            <span>
+              Log human bowel movements and pee, record Bristol Stool Scale types, and spot
+              bathroom patterns over time.
+            </span>
+          </span>
+          <span className="project-launch">
+            Open project
+            <ArrowUpRight aria-hidden="true" />
+          </span>
+        </a>
       </div>
-      <a
-        className="project-card"
-        href="https://potty.chrisbrennan.net/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <span className="project-icon"><PawPrint aria-hidden="true" /></span>
-        <span className="project-copy">
-          <small>Pet care utility</small>
-          <strong>Poop Tracker</strong>
-          <span>A straightforward log for tracking pet potty activity and spotting patterns.</span>
-        </span>
-        <span className="project-launch">
-          Open project
-          <ArrowUpRight aria-hidden="true" />
-        </span>
-      </a>
     </section>
   );
 }
@@ -199,7 +200,7 @@ function App() {
       <main>
         <Centerpiece />
         <BodybuildingPortal />
-        <FunProjects />
+        <Projects />
         <SocialBoard />
       </main>
       <footer>
