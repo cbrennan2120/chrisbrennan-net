@@ -79,7 +79,7 @@ function Centerpiece() {
         <Bolt className="bolt-br" />
         <picture>
           <img
-            src="/assets/chrisspace-2.0.png"
+            src="/assets/chrisspace-main.png"
             alt="Welcome to ChrisSpace 2.0. Chris Brennan builds useful things, helps animals, gets strong, and has fun."
             width="1536"
             height="1024"

@@ -6,81 +6,81 @@ const teams = ['Vindicate', 'Check-Six', 'Wat¿', 'DoP', 'OESM', 'cDD', 'Xeno', 
 
 const archivePhotos = [
   {
-    src: '/assets/esports/vindicate-cpl-winter-2002.png',
+    src: '/assets/esports-archive/vindicate-cpl-winter-2002.png',
     alt: 'Team Vindicate after winning first place in Team Fortress Classic at CPL Winter 2002',
     caption: 'First place — CPL Winter 2002 Team Fortress Classic. Team Vindicate.',
     className: 'archive-photo--wide'
   },
   {
-    src: '/assets/esports/cpl-winner-check.png',
+    src: '/assets/esports-archive/cpl-winner-check.png',
     alt: 'Chris Brennan holding a Team Fortress Classic championship prize check',
     caption: 'Championship secured: the TFC winner’s check.'
   },
   {
-    src: '/assets/esports/vindicate-awards-stage.png',
+    src: '/assets/esports-archive/vindicate-awards-stage.png',
     alt: 'Team Vindicate receiving the Team Fortress Classic championship award on the CPL stage',
     caption: 'Vindicate on the CPL stage receiving the Winter 2002 championship check.'
   },
   {
-    src: '/assets/esports/stickgod-cpl-medal.png',
+    src: '/assets/esports-archive/stickgod-cpl-medal.png',
     alt: 'Chris st1ckg0d Brennan seated in a large chair and holding up his CPL medal',
     caption: 'st1ckg0d with his CPL medal after the championship run.'
   },
   {
-    src: '/assets/esports/everlan-boston-prizes.png',
+    src: '/assets/esports-archive/everlan-boston-prizes.png',
     alt: 'Chris stickgod Brennan standing behind computer hardware prizes at EverLAN in Boston',
     caption: 'EverLAN in Boston—stickgod with the tournament prizes.'
   },
   {
-    src: '/assets/esports/stickgod-ross-everlan.png',
+    src: '/assets/esports-archive/stickgod-ross-everlan.png',
     alt: 'Chris stickgod Brennan gaming with his local friend Ross at EverLAN in Boston',
     caption: 'stickgod and Ross, his local gaming buddy, at EverLAN in Boston.'
   },
   {
-    src: '/assets/esports/l4-engineer-guild.png',
+    src: '/assets/esports-archive/l4-engineer-guild.png',
     alt: 'Chris Brennan with BluR and Captain Ron at an esports event',
     caption: 'The L4 Engineer guild: st1ckg0d with BluR and Captain Ron—the other two best Engineers in TFC.'
   },
   {
-    src: '/assets/esports/byoc-tfc-champions.png',
+    src: '/assets/esports-archive/byoc-tfc-champions.png',
     alt: 'The first BYOC Team Fortress Classic championship team before Vindicate',
     caption: 'The first BYOC TFC championship team before Vindicate—with Focus, Solo, rent, Kid Knight, and teammates.'
   },
   {
-    src: '/assets/esports/team-wat-cpl.png',
+    src: '/assets/esports-archive/team-wat-cpl.png',
     alt: 'Team Wat¿ together at a CPL event with Halo PCs behind them',
     caption: 'Team Wat¿ at CPL Winter 2003—including Gryp, Kron, and st1ckg0d—third place globally in Halo PC.',
     className: 'archive-photo--wide'
   },
   {
-    src: '/assets/esports/team-wat-in-action.png',
+    src: '/assets/esports-archive/team-wat-in-action.png',
     alt: 'Team Wat¿ wearing headsets and competing side by side on Halo PCs',
     caption: 'Team Wat¿ in action on the Halo PC tournament floor.'
   },
   {
-    src: '/assets/esports/fireblade-and-stkgd.png',
+    src: '/assets/esports-archive/fireblade-and-stkgd.png',
     alt: 'Fireblade and stkgd together wearing Team Wat¿ shirts',
     caption: 'Fireblade and stkgd representing Team Wat¿.'
   },
   {
-    src: '/assets/esports/wat-halo-carnage-report.png',
+    src: '/assets/esports-archive/wat-halo-carnage-report.png',
     alt: 'Halo postgame carnage report showing Wat¿ stkgd in first place with 35 kills',
     caption: 'Postgame carnage report: Wat¿ stkgd takes first with 35 kills.',
     className: 'archive-photo--game'
   },
   {
-    src: '/assets/esports/team-xeno-halo.png',
+    src: '/assets/esports-archive/team-xeno-halo.png',
     alt: 'Members of Halo team Xeno relaxing together',
     caption: '[xeno] Halo roster—Kaexo, Oplaid, Jeebus, st1ckg0d, and teammate.'
   },
   {
-    src: '/assets/esports/stkgd-wow-paladin.png',
+    src: '/assets/esports-archive/stkgd-wow-paladin.png',
     alt: 'World of Warcraft raid screenshot from healing Paladin stkgd during the Vanilla era',
     caption: 'Healing Paladin stkgd in Vanilla WoW raid progression—one of the few surviving screenshots.',
     className: 'archive-photo--wide archive-photo--game'
   },
   {
-    src: '/assets/esports/stickgod-portrait.png',
+    src: '/assets/esports-archive/stickgod-portrait.png',
     alt: 'A young Chris Brennan looking back toward the camera with the name st1ckg0d over the image',
     caption: 'st1ckg0d on the road during the early professional era.'
   }
@@ -232,11 +232,11 @@ function App() {
           </div>
           <div className="broadcast-photos">
             <figure>
-              <img src="/assets/esports/gbc-radio-shoutcasting.png" alt="stickgod broadcasting from the GBC Radio station at a LAN event" loading="lazy" />
+              <img src="/assets/esports-archive/gbc-radio-shoutcasting.png" alt="stickgod broadcasting from the GBC Radio station at a LAN event" loading="lazy" />
               <figcaption>st1ckg0d at the GBC Radio broadcast station.</figcaption>
             </figure>
             <figure>
-              <img src="/assets/esports/stickgod-shoutcasting-lan.png" alt="stickgod shoutcasting with a microphone on the floor of a LAN event" loading="lazy" />
+              <img src="/assets/esports-archive/stickgod-shoutcasting-lan.png" alt="stickgod shoutcasting with a microphone on the floor of a LAN event" loading="lazy" />
               <figcaption>stickgod shoutcasting live from the LAN floor.</figcaption>
             </figure>
           </div>

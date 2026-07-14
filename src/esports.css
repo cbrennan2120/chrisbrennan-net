@@ -89,7 +89,7 @@ main { width: min(1180px, calc(100% - 2rem)); margin: 0 auto; }
   background-color: #111b27;
   background-image:
     linear-gradient(180deg, transparent 62%, rgba(5, 7, 17, 0.92)),
-    url('/assets/chrisspace-2.0.png');
+    url('/assets/chrisspace-main.png');
   background-repeat: no-repeat;
   background-size: 310% auto;
   background-position: 0 7%;
