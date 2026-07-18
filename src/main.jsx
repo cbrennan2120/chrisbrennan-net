@@ -1,6 +1,7 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
 import {
+  Apple,
   ArrowUpRight,
   Dumbbell,
   Facebook,
@@ -130,6 +131,39 @@ function BodybuildingPortal() {
   );
 }
 
+function CurrentPlanPortal() {
+  return (
+    <a
+      className="macros-portal"
+      href="https://plan.chrisbrennan.net/"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-labelledby="macros-title"
+    >
+      <span className="macros-icon" aria-hidden="true">
+        <Apple />
+        <Dumbbell />
+      </span>
+      <span className="macros-copy">
+        <small className="eyebrow">My Macros</small>
+        <strong id="macros-title">Chelsea / No Chelsea Split</strong>
+        <span>
+          My current meal plan and alternating workout split, built around Chelsea and
+          no-Chelsea weeks.
+        </span>
+        <span className="macros-tags" aria-hidden="true">
+          <i>Meal plan</i>
+          <i>Training split</i>
+        </span>
+      </span>
+      <span className="macros-launch">
+        Open my current plan
+        <ArrowUpRight aria-hidden="true" />
+      </span>
+    </a>
+  );
+}
+
 function Projects() {
   return (
     <section className="project-bay" aria-labelledby="projects-title">
@@ -207,6 +241,7 @@ function App() {
       <main>
         <Centerpiece />
         <BodybuildingPortal />
+        <CurrentPlanPortal />
         <Projects />
         <SocialBoard />
       </main>
