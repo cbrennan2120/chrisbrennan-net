@@ -138,12 +138,26 @@ const organizations = [
     actions: [
       { label: 'Visit organization', href: 'https://www.facebook.com/SabrinasLightInc/' }
     ]
+  },
+  {
+    name: 'Kitten Konnection',
+    shortName: 'Foster rescue',
+    county: 'Calhoun County',
+    icon: PawPrint,
+    description: 'A home-based foster rescue providing safe haven, care, and forever-home placement for lost, stray, and abandoned kittens six months and younger.',
+    badges: ['Adopt', 'Donate', 'Volunteer', 'Learn More'],
+    actions: [
+      { label: 'Adopt', href: 'https://kittenkonnection.com/adopting/' },
+      { label: 'Donate', href: 'https://kittenkonnection.com/support-our-work/' },
+      { label: 'Foster', href: 'https://kittenkonnection.com/fostering/' },
+      { label: 'Learn More', href: 'https://kittenkonnection.com/' }
+    ]
   }
 ];
 
 function Brand() {
   return (
-    <a className="brand" href="/" aria-label="ChrisSpace home">
+    <a className="brand" href="https://chrisbrennan.net/" aria-label="ChrisSpace main site">
       <span className="brand-mark"><PawPrint aria-hidden="true" /></span>
       <span>
         <strong>Chris Brennan</strong>
@@ -386,9 +400,14 @@ function App() {
     <div className="site-shell">
       <header className="site-header">
         <Brand />
-        <nav aria-label="Animal advocacy page navigation">
-          {navItems.map(({ label, href }) => <a href={href} key={label}>{label}</a>)}
-        </nav>
+        <div className="header-actions">
+          <nav aria-label="Animal advocacy page navigation">
+            {navItems.map(({ label, href }) => <a href={href} key={label}>{label}</a>)}
+          </nav>
+          <a className="main-site-link" href="https://chrisbrennan.net/">
+            <Home aria-hidden="true" /> Back to main site
+          </a>
+        </div>
       </header>
       <main>
         <Hero />
