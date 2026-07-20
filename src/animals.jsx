@@ -194,6 +194,18 @@ const organizations = [
       { label: 'Donate', href: 'https://www.animalsbestfriendfund.org/donate' },
       { label: 'Learn More', href: 'https://www.animalsbestfriendfund.org/' }
     ]
+  },
+  {
+    name: 'Cat Nap Lodge',
+    shortName: 'Cat rescue • Richland',
+    county: 'Kalamazoo County',
+    icon: PawPrint,
+    description: 'A nonprofit cat rescue in Richland providing safe care, medical support, and adoption help for cats and kittens across Kalamazoo, Battle Creek, and Southwest Michigan.',
+    actions: [
+      { label: 'Adopt', href: 'https://catnaplodge.com/adoption' },
+      { label: 'Donate', href: 'https://catnaplodge.com/donations' },
+      { label: 'Learn More', href: 'https://catnaplodge.com/our-story' }
+    ]
   }
 ];
 
