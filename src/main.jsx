@@ -211,6 +211,27 @@ function Projects() {
       <div className="project-grid">
         <a
           className="project-card"
+          href="https://battlecreekjobs.app/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <span className="project-icon" aria-hidden="true">💼</span>
+          <span className="project-copy">
+            <small>Hiring + onboarding platform</small>
+            <strong>Battle Creek Jobs</strong>
+            <span>
+              When the usual hiring tools were not delivering the right experience for Pet Supplies
+              Plus, Chris built a dedicated platform covering the application process through
+              onboarding—with room to support other local employers in the future.
+            </span>
+          </span>
+          <span className="project-launch">
+            Open project
+            <ArrowUpRight aria-hidden="true" />
+          </span>
+        </a>
+        <a
+          className="project-card"
           href="https://potty.chrisbrennan.net/"
           target="_blank"
           rel="noopener noreferrer"

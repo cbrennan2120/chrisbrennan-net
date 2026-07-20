@@ -333,7 +333,8 @@ h1 span { display: block; color: var(--green-bright); }
 .county-heading span { font-size: 1.1rem; font-weight: 950; text-transform: uppercase; }
 .county-heading i { margin-left: auto; color: #6f765f; font-size: 0.7rem; font-style: normal; font-weight: 850; text-transform: uppercase; }
 .organization-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
-.organization-card { display: flex; flex-direction: column; min-height: 380px; padding: clamp(1.2rem, 3vw, 1.8rem); border: 2px solid #273523; border-radius: 8px 20px 8px 20px; background: #fff9e9; box-shadow: 7px 8px 0 #759653; }
+.organization-card { display: flex; flex-direction: column; min-height: 300px; padding: clamp(1.2rem, 3vw, 1.8rem); border: 2px solid #273523; border-radius: 8px 20px 8px 20px; background: #fff9e9; box-shadow: 7px 8px 0 #759653; }
+.organization-grid > .organization-card:last-child:nth-child(odd) { grid-column: 1 / -1; width: calc(50% - 0.5rem); justify-self: center; }
 .organization-title { display: grid; grid-template-columns: auto 1fr; gap: 0.8rem; align-items: center; }
 .organization-title > span { display: grid; place-items: center; width: 52px; height: 52px; color: #14200f; border-radius: 50%; background: var(--green-bright); transform: rotate(-4deg); }
 .organization-title svg { width: 26px; }
@@ -341,16 +342,11 @@ h1 span { display: block; color: var(--green-bright); }
 .organization-title small { color: #718064; font-size: 0.62rem; font-weight: 900; letter-spacing: 0.09em; text-transform: uppercase; }
 .organization-title h3 { margin: 0.25rem 0 0; font-size: 1.2rem; line-height: 1.08; text-transform: uppercase; }
 .organization-card > p { color: #53604e; line-height: 1.55; }
-.action-badges { display: flex; flex-wrap: wrap; gap: 0.4rem; margin: auto 0 1rem; }
-.action-badges span { padding: 0.32rem 0.5rem; color: #28351e; border: 1px solid #9eb384; border-radius: 999px; background: #e7f3d6; font-size: 0.62rem; font-weight: 950; text-transform: uppercase; }
-.organization-actions { display: flex; flex-wrap: wrap; gap: 0.55rem; }
-.organization-actions a { display: inline-flex; align-items: center; gap: 0.25rem; padding: 0.55rem 0.65rem; color: #fffdf5; border: 1px solid #31432a; background: #304d28; font-size: 0.67rem; font-weight: 900; text-transform: uppercase; }
+.organization-actions { display: flex; flex-wrap: wrap; gap: 0.45rem; margin-top: auto; padding-top: 1rem; }
+.organization-actions a { display: inline-flex; align-items: center; gap: 0.25rem; padding: 0.45rem 0.68rem; color: #f8fbff; border: 1px solid #235d8d; border-radius: 7px; background: #327fbd; box-shadow: 0 2px 0 #174568; font-size: 0.63rem; font-weight: 900; text-transform: uppercase; transition: background 150ms ease, transform 150ms ease; }
 .organization-actions svg { width: 14px; }
-.organization-actions a:hover, .organization-actions a:focus-visible { background: #477239; }
-.kalamazoo-panel { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 1rem; align-items: center; margin-top: 1.3rem; padding: clamp(1.2rem, 3vw, 1.8rem); border: 2px dashed #94845f; border-radius: 16px; background: rgba(255,255,255,0.3); }
-.kalamazoo-icon { display: grid; place-items: center; width: 66px; height: 66px; color: #fef6df; border-radius: 16px; background: #263b26; transform: rotate(-2deg); }
-.kalamazoo-panel h3 { margin: 0.25rem 0; font-size: 1.4rem; text-transform: uppercase; }
-.kalamazoo-panel p { margin: 0; color: #56604f; line-height: 1.5; }
+.organization-actions a:hover, .organization-actions a:focus-visible { background: #246b9f; transform: translateY(-1px); }
+.county-heading-kalamazoo { margin-top: clamp(2.2rem, 5vw, 3.5rem); }
 .directory-note { display: flex; align-items: flex-start; gap: 0.65rem; margin: 1.2rem 0 0; color: #626b58; font-size: 0.78rem; line-height: 1.5; }
 .directory-note svg { flex: 0 0 18px; width: 18px; }
 
@@ -393,7 +389,7 @@ footer p { margin: 1rem 0 0; color: var(--muted); }
   .barbara-card { transform: none; }
   .help-section { padding-inline: 1rem; }
   .organization-grid { grid-template-columns: 1fr; }
-  .organization-card, .organization-card:last-child { grid-column: auto; min-height: 0; }
+  .organization-card, .organization-grid > .organization-card:last-child:nth-child(odd) { grid-column: auto; width: auto; min-height: 0; }
   footer { grid-template-columns: 1fr; padding-inline: 1rem; }
   .footer-contact { text-align: left; }
 }
@@ -411,7 +407,6 @@ footer p { margin: 1rem 0 0; color: var(--muted); }
   .dog-card img { aspect-ratio: 3 / 4; }
   .county-heading { align-items: flex-start; flex-wrap: wrap; }
   .county-heading i { width: 100%; margin-left: 1.8rem; }
-  .kalamazoo-panel { grid-template-columns: 1fr; }
   .organization-actions a { flex: 1 1 auto; justify-content: center; }
 }
 

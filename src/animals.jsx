@@ -40,7 +40,7 @@ const career = [
     role: 'Sales Team Member',
     dates: 'October 1999 – July 2001',
     icon: ShoppingBag,
-    text: 'Where a career serving neighbors, supporting teams, and working around animals and the rural lifestyle first took shape.'
+    text: 'Where a career serving customers, merchandising, and working around animals and the rural lifestyle first took shape.'
   },
   {
     company: 'Tractor Supply Company',
@@ -108,7 +108,6 @@ const organizations = [
     county: 'Calhoun County',
     icon: Heart,
     description: 'The shelter where Chris has served on the Board of Directors since 2019, including terms as Vice Chair and Board Chair.',
-    badges: ['Adopt', 'Donate', 'Volunteer'],
     actions: [
       { label: 'Adopt', href: 'https://hsscm.org/?page_id=37' },
       { label: 'Donate', href: 'https://hsscm.org/?page_id=42' },
@@ -120,8 +119,7 @@ const organizations = [
     shortName: 'CCAC',
     county: 'Calhoun County',
     icon: Home,
-    description: 'A Battle Creek animal center helping dogs and cats receive care while they wait for permanent homes.',
-    badges: ['Adopt', 'Donate', 'Volunteer'],
+    description: 'Battle Creek’s city shelter, where stray animals and dogs picked up by animal control are taken. It is frequently at capacity and offers a straightforward adoption process.',
     actions: [
       { label: 'Adopt', href: 'https://www.calhouncountyanimalcenter.org/adoption-info.html' },
       { label: 'Donate', href: 'https://www.calhouncountyanimalcenter.org/donations.html' },
@@ -133,10 +131,10 @@ const organizations = [
     shortName: 'Rescue support',
     county: 'Calhoun County',
     icon: HandHeart,
-    description: 'A local rescue connection Chris has supported through community donations and in-store partnership.',
-    badges: ['Donate', 'Learn More'],
+    description: 'Sabrina’s Light is committed to enhancing the lives of dogs, especially Bully Breeds, by partnering with rescues and shelters to deliver vital services such as veterinary care, training, and socialization.',
     actions: [
-      { label: 'Visit organization', href: 'https://www.facebook.com/SabrinasLightInc/' }
+      { label: 'Donate', href: 'https://www.sabrinaslight.org/donate/' },
+      { label: 'Learn More', href: 'https://www.sabrinaslight.org/about/' }
     ]
   },
   {
@@ -145,12 +143,56 @@ const organizations = [
     county: 'Calhoun County',
     icon: PawPrint,
     description: 'A home-based foster rescue providing safe haven, care, and forever-home placement for lost, stray, and abandoned kittens six months and younger.',
-    badges: ['Adopt', 'Donate', 'Volunteer', 'Learn More'],
     actions: [
       { label: 'Adopt', href: 'https://kittenkonnection.com/adopting/' },
       { label: 'Donate', href: 'https://kittenkonnection.com/support-our-work/' },
       { label: 'Foster', href: 'https://kittenkonnection.com/fostering/' },
       { label: 'Learn More', href: 'https://kittenkonnection.com/' }
+    ]
+  },
+  {
+    name: 'All Species Kinship',
+    shortName: 'A.S.K.',
+    county: 'Calhoun County',
+    icon: HandHeart,
+    description: 'Supports wildlife rehabilitation and brings practical, nonjudgmental outreach directly to animals and families in underserved Battle Creek and Calhoun County neighborhoods.',
+    actions: [
+      { label: 'Donate', href: 'https://allspecieskinship.org/help-us/' },
+      { label: 'Learn More', href: 'https://allspecieskinship.org/' }
+    ]
+  },
+  {
+    name: 'Animal Rescue Project',
+    shortName: 'Chris approved',
+    county: 'Kalamazoo County',
+    icon: PawPrint,
+    description: 'A great Kalamazoo-area place to adopt a dog or cat, providing rescue, rehabilitation, and responsible adoption services. Chris approved.',
+    actions: [
+      { label: 'Adopt', href: 'https://animalrescueproject.org/Adopt/Application' },
+      { label: 'Donate', href: 'https://animalrescueproject.org/Give/Donate' },
+      { label: 'Learn More', href: 'https://animalrescueproject.org/' }
+    ]
+  },
+  {
+    name: 'Kalamazoo County Animal Services & Enforcement',
+    shortName: 'Chris approved',
+    county: 'Kalamazoo County',
+    icon: Building2,
+    description: 'Kalamazoo County’s municipal shelter, caring for lost and stray animals while helping adoptable pets find new homes. Chris approved.',
+    actions: [
+      { label: 'Adopt', href: 'https://www.petfinder.com/member/us/mi/kalamazoo/kalamazoo-county-animal-services-enforcement-mi520/' },
+      { label: 'Learn More', href: 'https://www.kalcounty.gov/168/Animal-Services-Enforcement' }
+    ]
+  },
+  {
+    name: 'Animal’s Best Friend Fund',
+    shortName: 'Spay + neuter support',
+    county: 'Kalamazoo County',
+    icon: Heart,
+    description: 'Helps reduce stray and unwanted dog and cat populations by funding spay and neuter assistance for qualifying families and feral-cat caretakers.',
+    actions: [
+      { label: 'Donate', href: 'https://www.animalsbestfriendfund.org/donate' },
+      { label: 'Learn More', href: 'https://www.animalsbestfriendfund.org/' }
     ]
   }
 ];
@@ -338,9 +380,6 @@ function OrganizationCard({ organization }) {
         <div><small>{organization.shortName}</small><h3>{organization.name}</h3></div>
       </div>
       <p>{organization.description}</p>
-      <div className="action-badges" aria-label="Ways to help">
-        {organization.badges.map((badge) => <span key={badge}>{badge}</span>)}
-      </div>
       <div className="organization-actions">
         {organization.actions.map(({ label, href }) => (
           <a href={href} target="_blank" rel="noopener noreferrer" key={label}>
@@ -354,6 +393,7 @@ function OrganizationCard({ organization }) {
 
 function HelpDirectory() {
   const calhounOrganizations = organizations.filter(({ county }) => county === 'Calhoun County');
+  const kalamazooOrganizations = organizations.filter(({ county }) => county === 'Kalamazoo County');
   return (
     <section className="help-section" id="help">
       <SectionHeading
@@ -365,13 +405,9 @@ function HelpDirectory() {
       <div className="organization-grid">
         {calhounOrganizations.map((organization) => <OrganizationCard organization={organization} key={organization.name} />)}
       </div>
-      <div className="kalamazoo-panel">
-        <span className="kalamazoo-icon"><Building2 aria-hidden="true" /></span>
-        <div>
-          <span className="eyebrow">Kalamazoo County</span>
-          <h3>Local picks are next</h3>
-          <p>I’m personally reviewing the Kalamazoo-area groups I want to recommend. They’ll be added here with direct adoption, donation, and volunteer links.</p>
-        </div>
+      <div className="county-heading county-heading-kalamazoo"><MapPin aria-hidden="true" /><span>Kalamazoo County</span><i>{kalamazooOrganizations.length} recommendations</i></div>
+      <div className="organization-grid">
+        {kalamazooOrganizations.map((organization) => <OrganizationCard organization={organization} key={organization.name} />)}
       </div>
       <p className="directory-note">
         <Gift aria-hidden="true" /> Adoption requirements, wish lists, volunteer availability, and donation methods can change. Please verify current details on each organization’s official page before visiting or giving.
