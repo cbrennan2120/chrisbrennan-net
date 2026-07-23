@@ -323,6 +323,8 @@ h1 span {
 
 .section-copy p,
 .pillar p,
+.arc-card p,
+.real-life-card p,
 .timeline-item p,
 .behind-card p,
 .journal-card p,
@@ -357,6 +359,7 @@ h1 span {
 }
 
 .pillar h3,
+.arc-card h3,
 .timeline-item h3,
 .behind-card h3,
 .journal-card h3,
@@ -365,6 +368,90 @@ h1 span {
   font-size: 0.94rem;
   line-height: 1.25;
   font-weight: 950;
+}
+
+.story-arc {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: clamp(1.2rem, 3vw, 2rem);
+}
+
+.arc-card {
+  min-height: 230px;
+  padding: 1.2rem;
+  border: 1px solid var(--line);
+  background:
+    linear-gradient(180deg, rgba(92, 245, 216, 0.055), rgba(255, 255, 255, 0.015)),
+    var(--panel-2);
+}
+
+.arc-card span {
+  display: inline-grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  color: #061118;
+  background: var(--mint);
+  font-size: 0.82rem;
+  font-weight: 950;
+}
+
+.arc-card h3 {
+  margin-top: 1.2rem;
+}
+
+.arc-card p {
+  margin-bottom: 0;
+}
+
+.real-life-gallery {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.real-life-card {
+  position: relative;
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid rgba(148, 182, 193, 0.2);
+  background: #071219;
+}
+
+.real-life-card img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  object-position: center;
+  filter: saturate(0.92) contrast(1.05);
+}
+
+.real-life-card:nth-child(2) img {
+  object-position: center top;
+}
+
+.real-life-card figcaption {
+  min-height: 165px;
+  padding: 1rem;
+  border-top: 1px solid var(--line);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.035), rgba(255, 255, 255, 0.015));
+}
+
+.real-life-card strong {
+  display: block;
+  color: var(--mint);
+  font-size: 1rem;
+  font-weight: 950;
+  text-transform: uppercase;
+}
+
+.real-life-card p {
+  margin: 0.65rem 0 0;
 }
 
 .timeline {
@@ -694,12 +781,14 @@ h1 span {
   }
 
   .pillar-grid,
+  .story-arc,
   .journal-grid,
   .goal-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .timeline,
+  .real-life-gallery,
   .behind-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
@@ -738,7 +827,9 @@ h1 span {
   }
 
   .pillar-grid,
+  .story-arc,
   .timeline,
+  .real-life-gallery,
   .gallery-grid,
   .behind-grid,
   .journal-grid,

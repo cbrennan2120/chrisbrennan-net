@@ -98,12 +98,13 @@ function Centerpiece() {
       <div className="mission-panel">
         <div className="terminal-copy">
           <span className="prompt" aria-hidden="true">&gt;</span>
-          <p>Buildin&apos; stuff. Helpin&apos; animals. Gettin&apos; strong. Havin&apos; fun.</p>
+          <p>Build useful things. Help animals. Build yourself in real life.</p>
           <span className="cursor" aria-hidden="true" />
         </div>
         <p className="intro-copy">
-          You found Chris Brennan—a retail leader, builder, animal advocate, competitive gamer,
-          bodybuilder, and dad in Michigan. This is the front door to whatever he&apos;s making next.
+          Chris Brennan is a Michigan-based retail leader, builder of practical tools, dad, animal
+          advocate, and lifelong competitor. He leads teams, solves real problems, and keeps showing
+          up when life gets complicated.
         </p>
       </div>
     </section>
@@ -115,15 +116,16 @@ function BodybuildingPortal() {
     <section className="bodybuilding-portal" aria-labelledby="bodybuilding-title">
       <div className="bodybuilding-photo" aria-hidden="true" />
       <div className="bodybuilding-copy">
-        <span className="eyebrow">The stage files</span>
-        <h2 id="bodybuilding-title">Chris Brennan Bodybuilding</h2>
+        <span className="eyebrow">Built in real life</span>
+        <h2 id="bodybuilding-title">My First Bodybuilding Show</h2>
         <p>
-          The complete first-show story, competition gallery, prep timeline, journal, and future
-          physique goals now have a dedicated home.
+          I chose the stage as a hard target during a demanding season of work, fatherhood, fatigue,
+          and health challenges. This is the story of the decisions and consistency that got me
+          there.
         </p>
         <a className="bodybuilding-link" href="/bodybuilding/">
           <Dumbbell aria-hidden="true" />
-          Enter the bodybuilding page
+          Read the story
           <ArrowUpRight aria-hidden="true" />
         </a>
       </div>
@@ -145,11 +147,11 @@ function CurrentPlanPortal() {
         <Dumbbell />
       </span>
       <span className="macros-copy">
-        <small className="eyebrow">My Macros</small>
-        <strong id="macros-title">Chelsea / No Chelsea Split</strong>
+        <small className="eyebrow">Training in real life</small>
+        <strong id="macros-title">The Current Plan</strong>
         <span>
-          My current meal plan and alternating workout split, built around Chelsea and
-          no-Chelsea weeks.
+          My current meal plan and alternating workout split, organized around family weeks, work,
+          and recovery.
         </span>
         <span className="macros-tags" aria-hidden="true">
           <i>Meal plan</i>
@@ -177,11 +179,11 @@ function Projects() {
         >
           <span className="project-icon" aria-hidden="true">💩</span>
           <span className="project-copy">
-            <small>Human health tracker</small>
+            <small>Practical health tool</small>
             <strong>Poop Tracker</strong>
             <span>
-              Log human bowel movements and pee, record Bristol Stool Scale types, and spot
-              bathroom patterns over time.
+              A simple way to log bathroom habits, use the Bristol Stool Scale, and notice patterns
+              over time.
             </span>
           </span>
           <span className="project-launch">
@@ -223,7 +225,10 @@ function SocialBoard() {
       <aside className="contact-strip" aria-label="Collaboration contact">
         <div>
           <span className="eyebrow">Got something useful to build?</span>
-          <p>Collaboration, community, tech, fitness, or animal-focused ideas are always welcome.</p>
+          <p>
+            Open to thoughtful ideas across community, technology, fitness, animal welfare, and
+            practical tools.
+          </p>
         </div>
         <a className="contact-button" href="mailto:cbrennan2120@gmail.com">
           <Mail aria-hidden="true" />
