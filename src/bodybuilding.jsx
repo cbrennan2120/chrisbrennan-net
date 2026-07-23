@@ -41,23 +41,69 @@ const navItems = [
 const storyPillars = [
   {
     icon: Target,
-    title: 'Why I Started',
-    text: 'After years of execution in esports and high-volume retail, turning 41 became the catalyst to stop wondering what if and test the limits.'
+    title: 'The Decision',
+    text: 'I picked a show because I needed a hard target. Not a vague goal, not someday, but a date on the calendar that forced me to act.'
   },
   {
     icon: Mountain,
-    title: 'The Hardest Part',
-    text: 'Mental fatigue in the final weeks: low energy, brain fog, work responsibility, and still showing up fully as Chelsea\'s dad.'
+    title: 'The Real Life Part',
+    text: 'Prep happened around work, fatherhood, fatigue, medical appointments, and the normal responsibilities that do not pause for ambition.'
   },
   {
     icon: Brain,
-    title: 'Mindset Shift',
-    text: 'I shifted from working hard to executing with mechanical precision: nutrition, training, recovery, and every variable treated as data.'
+    title: 'The Process',
+    text: 'Training, food, recovery, check-ins, bloodwork awareness, and consistency became the system. The goal was progress without pretending life was perfect.'
   },
   {
     icon: Trophy,
-    title: 'What It Meant',
-    text: 'Standing under the lights at Grandville High School validated a 20+ week silent battle built on structure, science, and suffering.'
+    title: 'The Lesson',
+    text: 'The stage was not a finish line for attention. It was proof that you can build yourself in real life, even when conditions are imperfect.'
+  }
+];
+
+const storyArc = [
+  {
+    step: '01',
+    title: 'The Problem',
+    text: 'Anemia, fatigue, real responsibilities, and the feeling that my body had limits I could not just outwork.'
+  },
+  {
+    step: '02',
+    title: 'The Decision',
+    text: 'Choosing the NPC Grand Rapids stage gave the rebuild a deadline. It turned "I should" into a date, a plan, and accountability.'
+  },
+  {
+    step: '03',
+    title: 'The Process',
+    text: 'Training, food, recovery, medical awareness, and daily execution had to work together. Some days were heavy. The standard stayed simple: do the next right thing.'
+  },
+  {
+    step: '04',
+    title: 'The Stage',
+    text: 'It was not "look at me." It was "I made it here." The lights, the tan, the posing, and Chelsea being there made the work real.'
+  },
+  {
+    step: '05',
+    title: 'The Lesson',
+    text: 'You do not need perfect conditions to start rebuilding. You need honesty, help, structure, and enough stubborn consistency to keep showing up.'
+  }
+];
+
+const realLifePhotos = [
+  {
+    image: '/assets/show/story/starting-point.png',
+    title: 'Starting Point',
+    text: 'Before the stage version, there was real life: fatherhood, work, extra weight, and the first version of the rebuild already quietly beginning.'
+  },
+  {
+    image: '/assets/show/story/hospital-double-biceps.png',
+    title: 'Still Building',
+    text: 'Hospital wristband, infusion room, double biceps. Not glamorous, but honest: some chapters are about rebuilding where you are.'
+  },
+  {
+    image: '/assets/show/story/post-show-meal.png',
+    title: 'After The Work',
+    text: 'The post-show meal hit different because it came after months of structure, nerves, low-energy days, and staying with the plan.'
   }
 ];
 
@@ -163,13 +209,13 @@ const journalPosts = [
   },
   {
     title: 'Lessons From Prep',
-    kicker: 'The Science Of The Shred',
-    text: 'Bodybuilding became an optimization problem. Coming from competitive gaming and retail leadership, I treated prep like an N=1 study: carbohydrate timing, recovery markers, insulin sensitivity, and metabolic efficiency all had to earn their place.'
+    kicker: 'Building In Real Life',
+    text: 'Prep taught me that discipline is not pretending life is simple. It is building a system around the hard parts: food, training, recovery, bloodwork, fatigue, fatherhood, and still showing up.'
   },
   {
     title: 'Post-Show Transition',
     kicker: 'Rebuilding The Engine',
-    text: 'The tan is fading, but the work has not stopped. The next phase is controlled metabolic recovery, a structured reverse diet, and targeted growth without letting the post-show window turn into chaos.'
+    text: 'The tan is fading, but the work has not stopped. The next phase is recovery, smarter growth, health markers, and building the next version without losing the reason this mattered.'
   }
 ];
 
@@ -182,12 +228,12 @@ const goals = [
   {
     icon: Goal,
     title: 'Offseason Priorities',
-    text: 'Restore baseline metabolic and hormone health, then move into a sustained surplus built for clean tissue accretion.'
+    text: 'Restore energy, health markers, and training performance, then move into a sustained surplus built for clean tissue accretion.'
   },
   {
     icon: HeartPulse,
     title: 'Nutrition & Recovery',
-    text: 'Keep the focus on cellular optimization, gut health, sleep hygiene, and precise protocols that support nutrient partitioning.'
+    text: 'Keep the focus on food quality, sleep, digestion, medical follow-through, and recovery habits that support a full life outside the gym.'
   }
 ];
 
@@ -231,8 +277,8 @@ function Hero() {
         </h1>
         <div className="pulse-line" aria-hidden="true" />
         <p>
-          20 years in pet retail management, a lifetime in competitive gaming, and 20+ weeks of
-          relentless execution to transition from the desk to the NPC Masters and Men&apos;s Open stage.
+          A first contest prep built around work, fatherhood, fatigue, real-life pressure, and the
+          decision to rebuild anyway.
         </p>
         <div className="hero-actions">
           <a className="button primary" href="#story">My Story</a>
@@ -252,19 +298,24 @@ function Story() {
       <div className="section-copy">
         <SectionHeader title="My Story" />
         <p className="lead">
-          This was not a bucket-list item. It was a 20+ week test of discipline, fatherhood,
-          leadership, and data-driven execution.
+          This was not a bucket-list item. It was a real-life rebuild with a stage date attached to it.
         </p>
         <p>
-          Before prep, training was a passion layered into a life built around managing a busy Pet
-          Supplies Plus store and being a father to my 11-year-old daughter, Chelsea. Prep changed
-          the entire operating system: every meal, check-in, cardio session, and posing drill became
-          part of a controlled experiment.
+          Before prep, training was already part of my life. But life was also work, fatherhood,
+          fatigue, anemia, appointments, and days where my body did not feel like it matched the
+          goals in my head. I did not start from perfect health or perfect timing. I started from
+          where I actually was.
         </p>
         <p>
-          My background as a former professional cyberathlete shaped the approach. I treated
-          bodybuilding like competitive strategy in physical form, using precision, metabolic
-          efficiency, and repeatable execution instead of guesswork.
+          Choosing the show gave me a line in the sand. Every meal, lift, walk, check-in, posing
+          drill, health marker, recovery choice, and tired workday became part of the same question:
+          can I keep building when life is not optimized?
+        </p>
+        <p>
+          I could not have done that alone. Coach Mo guided the prep, Chelsea kept the reason close,
+          and the nurses at Bronson deserve a real shoutout. Nine iron IVs so far, plus blood
+          transfusions when I needed them, made me appreciate how much care happens quietly behind
+          the scenes. Nurses are amazing.
         </p>
         <a className="button secondary compact" href="#journal">Read the Journal</a>
       </div>
@@ -275,6 +326,26 @@ function Story() {
             <h3>{title}</h3>
             <p>{text}</p>
           </article>
+        ))}
+      </div>
+      <div className="story-arc" aria-label="Story arc">
+        {storyArc.map(({ step, title, text }) => (
+          <article className="arc-card" key={title}>
+            <span>{step}</span>
+            <h3>{title}</h3>
+            <p>{text}</p>
+          </article>
+        ))}
+      </div>
+      <div className="real-life-gallery" aria-label="Real life prep moments">
+        {realLifePhotos.map(({ image, title, text }) => (
+          <figure className="real-life-card" key={title}>
+            <img src={image} alt={`${title} from Chris Brennan's bodybuilding story`} loading="lazy" />
+            <figcaption>
+              <strong>{title}</strong>
+              <p>{text}</p>
+            </figcaption>
+          </figure>
         ))}
       </div>
     </section>
@@ -384,10 +455,12 @@ function Bio() {
             obsession, analysis, and acute attention to detail.
           </p>
           <p>
-            At age 41, Chris transitioned that competitive framework into a grueling 20+ week
-            contest preparation for his debut at the 2026 NPC Grand Rapids Championships. He balances
-            that pursuit with his most important role: being a dedicated father to Chelsea, who was
-            there for one of the most meaningful moments of the weekend.
+            At age 41, Chris transitioned that competitive framework into a 20+ week contest
+            preparation for his debut at the 2026 NPC Grand Rapids Championships. The journey also
+            included anemia, fatigue, medical follow-through, and a deeper respect for recovery,
+            which made the stage less about attention and more about rebuilding with honesty. He
+            balances that pursuit with his most important role: being a dedicated father to Chelsea,
+            who was there for one of the most meaningful moments of the weekend.
           </p>
         </article>
         <aside className="credits">
@@ -450,7 +523,7 @@ function Contact() {
     <footer className="site-footer" id="contact">
       <div>
         <BrandLogo />
-        <p>Documentary, polished, dark, and high contrast. The gritty reality of the sport, presented with data-driven professionalism.</p>
+        <p>Documentary, polished, dark, and high contrast. The gritty reality of building yourself in real life.</p>
       </div>
       <div>
         <h2>Let&apos;s Connect</h2>
@@ -464,7 +537,7 @@ function Contact() {
       </div>
       <div>
         <h2>Collaborations</h2>
-        <p>Open to content partnerships, scientifically sound supplement and apparel sponsorships, and tech or biohacking collaborations.</p>
+        <p>Open to content partnerships around training, transformation, health-aware discipline, community, and useful tools.</p>
         <a className="button secondary compact" href="mailto:cbrennan2120@gmail.com">Work With Me</a>
       </div>
     </footer>
