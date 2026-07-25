@@ -6,8 +6,10 @@ import {
   Dumbbell,
   Facebook,
   Instagram,
+  Linkedin,
   Mail,
   Music2,
+  PawPrint,
   Wrench,
   Youtube,
   Zap
@@ -44,6 +46,12 @@ const socialLinks = [
     handle: 'Chris Adam Brennan',
     href: 'https://www.facebook.com/ChrisAdamBrennan',
     icon: Facebook
+  },
+  {
+    label: 'LinkedIn',
+    handle: 'Chris Brennan',
+    href: 'https://www.linkedin.com/in/chris-brennan-38b27486/',
+    icon: Linkedin
   }
 ];
 
@@ -166,11 +174,64 @@ function CurrentPlanPortal() {
   );
 }
 
+function AnimalsPortal() {
+  return (
+    <a
+      className="macros-portal animals-portal"
+      href="https://animals.chrisbrennan.net/"
+      aria-labelledby="animals-title"
+    >
+      <span className="animals-icon" aria-hidden="true">
+        <img src="/assets/animal-advocacy/chris-and-bruno-at-the-creek.png" alt="" />
+        <PawPrint />
+      </span>
+      <span className="macros-copy">
+        <small className="eyebrow">Helpin&apos; animals</small>
+        <strong id="animals-title">Animal Advocacy + Pet Retail</strong>
+        <span>
+          More than 26 years in animal-focused retail, Humane Society board service,
+          community work, and trusted local ways to adopt or donate.
+        </span>
+        <span className="macros-tags" aria-hidden="true">
+          <i>Career journey</i>
+          <i>Board service</i>
+          <i>Adopt local</i>
+        </span>
+      </span>
+      <span className="macros-launch">
+        Explore the animals page
+        <ArrowUpRight aria-hidden="true" />
+      </span>
+    </a>
+  );
+}
+
 function Projects() {
   return (
     <section className="project-bay" aria-labelledby="projects-title">
       <h2 id="projects-title">My Projects</h2>
       <div className="project-grid">
+        <a
+          className="project-card"
+          href="https://battlecreekjobs.app/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <span className="project-icon" aria-hidden="true">💼</span>
+          <span className="project-copy">
+            <small>Hiring + onboarding platform</small>
+            <strong>Battle Creek Jobs</strong>
+            <span>
+              When the usual hiring tools were not delivering the right experience for Pet Supplies
+              Plus, Chris built a dedicated platform covering the application process through
+              onboarding—with room to support other local employers in the future.
+            </span>
+          </span>
+          <span className="project-launch">
+            Open project
+            <ArrowUpRight aria-hidden="true" />
+          </span>
+        </a>
         <a
           className="project-card"
           href="https://potty.chrisbrennan.net/"
@@ -246,6 +307,7 @@ function App() {
       <main>
         <Centerpiece />
         <BodybuildingPortal />
+        <AnimalsPortal />
         <CurrentPlanPortal />
         <Projects />
         <SocialBoard />
