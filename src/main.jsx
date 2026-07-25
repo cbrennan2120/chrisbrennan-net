@@ -8,10 +8,8 @@ import {
   Instagram,
   Linkedin,
   Mail,
-  Music2,
   PawPrint,
   Wrench,
-  Youtube,
   Zap
 } from 'lucide-react';
 import './styles.css';
@@ -22,18 +20,6 @@ const socialLinks = [
     handle: '@cbrennan2120',
     href: 'https://www.instagram.com/cbrennan2120',
     icon: Instagram
-  },
-  {
-    label: 'TikTok',
-    handle: '@hypertrophychris',
-    href: 'https://www.tiktok.com/@hypertrophychris',
-    icon: Music2
-  },
-  {
-    label: 'YouTube',
-    handle: '@cbrennan2120',
-    href: 'https://www.youtube.com/@cbrennan2120',
-    icon: Youtube
   },
   {
     label: 'X',
@@ -80,7 +66,6 @@ function Header() {
 function Centerpiece() {
   return (
     <section className="hero" id="top" aria-labelledby="hero-title">
-      <h1 id="hero-title" className="sr-only">Welcome to ChrisSpace 2.0</h1>
       <div className="hero-frame">
         <Bolt className="bolt-tl" />
         <Bolt className="bolt-tr" />
@@ -88,22 +73,35 @@ function Centerpiece() {
         <Bolt className="bolt-br" />
         <picture>
           <img
-            src="/assets/chrisspace-main.png"
-            alt="Welcome to ChrisSpace 2.0. Chris Brennan builds useful things, helps animals, gets strong, and has fun."
+            src="/assets/chrisspace-main-v3.png"
+            alt="Retro-industrial illustration of a team leader surrounded by symbols for people, animals, practical tools, retail, and fitness."
             width="1536"
             height="1024"
             fetchPriority="high"
           />
         </picture>
+        <div className="hero-art-copy" aria-hidden="true">
+          <span className="hero-art-label">ChrisSpace 2.0</span>
+          <strong className="hero-art-message">
+            <span>Lead Teams.</span>
+            <span>Build Systems.</span>
+            <em>Strengthen Communities.</em>
+          </strong>
+          <span className="hero-art-domain">ChrisBrennan.Net</span>
+        </div>
         <a
-          className="engineer-hotspot"
+          className="career-hotspot"
           href="/esports/"
           aria-label="Open Chris Brennan's st1ckg0d esports career history"
         >
-          <span aria-hidden="true">PLAYER 1 // ESPORTS BIO</span>
+          <span aria-hidden="true">CAREER ORIGINS // ESPORTS</span>
         </a>
       </div>
       <div className="mission-panel">
+        <h1 id="hero-title" className="professional-title">
+          <span>Chris Brennan</span>
+          Retail Leader, Community Builder &amp; Animal Advocate
+        </h1>
         <div className="terminal-copy">
           <span className="prompt" aria-hidden="true">&gt;</span>
           <p>Buildin&apos; stuff. Helpin&apos; animals. Gettin&apos; strong. Havin&apos; fun.</p>
@@ -126,8 +124,8 @@ function BodybuildingPortal() {
         <span className="eyebrow">The stage files</span>
         <h2 id="bodybuilding-title">Chris Brennan Bodybuilding</h2>
         <p>
-          The complete first-show story, competition gallery, prep timeline, journal, and future
-          physique goals now have a dedicated home.
+          A 100-pound transformation, a first NPC stage, and the systems, coaching, health lessons,
+          and daily execution behind the result.
         </p>
         <a className="bodybuilding-link" href="/bodybuilding/">
           <Dumbbell aria-hidden="true" />
@@ -154,10 +152,9 @@ function CurrentPlanPortal() {
       </span>
       <span className="macros-copy">
         <small className="eyebrow">My Macros</small>
-        <strong id="macros-title">Chelsea / No Chelsea Split</strong>
+        <strong id="macros-title">Week A / Week B Plan</strong>
         <span>
-          My current meal plan and alternating workout split, built around Chelsea and
-          no-Chelsea weeks.
+          Two alternating meal and training plans designed around different weekly schedules.
         </span>
         <span className="macros-tags" aria-hidden="true">
           <i>Meal plan</i>
@@ -198,6 +195,38 @@ function AnimalsPortal() {
       </span>
       <span className="macros-launch">
         Explore the animals page
+        <ArrowUpRight aria-hidden="true" />
+      </span>
+    </a>
+  );
+}
+
+function EsportsPortal() {
+  return (
+    <a
+      className="macros-portal esports-portal"
+      href="/esports/"
+      aria-labelledby="esports-title"
+    >
+      <span className="esports-icon" aria-hidden="true">
+        <img src="/assets/esports-archive/cpl-winner-check.png" alt="" />
+      </span>
+      <span className="macros-copy">
+        <small className="eyebrow">Career origins</small>
+        <strong id="esports-title">Competitive Gaming &amp; Esports</strong>
+        <span>
+          Before leading retail teams, I captained competitive gaming teams, won a CPL
+          championship, broadcast matches, and learned how to communicate, adapt, and perform
+          under pressure.
+        </span>
+        <span className="macros-tags" aria-hidden="true">
+          <i>CPL Champion</i>
+          <i>Team Captain</i>
+          <i>Broadcaster</i>
+        </span>
+      </span>
+      <span className="macros-launch">
+        Explore my esports history
         <ArrowUpRight aria-hidden="true" />
       </span>
     </a>
@@ -303,6 +332,7 @@ function App() {
         <Centerpiece />
         <BodybuildingPortal />
         <AnimalsPortal />
+        <EsportsPortal />
         <CurrentPlanPortal />
         <Projects />
         <SocialBoard />

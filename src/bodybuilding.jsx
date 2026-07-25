@@ -4,24 +4,17 @@ import {
   ArrowRight,
   Brain,
   CalendarDays,
-  Car,
   ClipboardCheck,
   Dumbbell,
   Facebook,
-  Flame,
-  Gauge,
   Goal,
   HeartPulse,
   Instagram,
-  MapPin,
   Medal,
   MessageCircle,
-  Mountain,
-  Scale,
   Sparkles,
   Target,
   Trophy,
-  Utensils,
   Youtube,
   Zap
 } from 'lucide-react';
@@ -29,11 +22,12 @@ import './bodybuilding.css';
 
 const navItems = [
   { label: 'ChrisSpace Home', href: '/' },
-  { label: 'My Story', href: '#story' },
-  { label: 'Timeline', href: '#timeline' },
+  { label: 'Transformation', href: '#transformation' },
+  { label: 'The Process', href: '#process' },
+  { label: 'The Challenge', href: '#challenge' },
+  { label: 'What It Meant', href: '#meaning' },
   { label: 'Gallery', href: '#gallery' },
-  { label: 'Journal', href: '#journal' },
-  { label: 'Goals', href: '#goals' },
+  { label: 'Lessons', href: '#lessons' },
   { label: 'Bio', href: '#bio' },
   { label: 'Contact', href: '#contact' }
 ];
@@ -41,56 +35,56 @@ const navItems = [
 const storyPillars = [
   {
     icon: Target,
-    title: 'Why I Started',
-    text: 'After years of execution in esports and high-volume retail, turning 41 became the catalyst to stop wondering what if and test the limits.'
+    title: 'Set A Meaningful Goal',
+    text: 'I chose a challenge that would require months of preparation, clear standards, and full accountability.'
   },
   {
-    icon: Mountain,
-    title: 'The Hardest Part',
-    text: 'Mental fatigue in the final weeks: low energy, brain fog, work responsibility, and still showing up fully as Chelsea\'s dad.'
+    icon: ClipboardCheck,
+    title: 'Build The System',
+    text: 'Training, nutrition, cardio, posing, recovery, and check-ins became a repeatable plan—not a test of daily motivation.'
   },
   {
-    icon: Brain,
-    title: 'Mindset Shift',
-    text: 'I shifted from working hard to executing with mechanical precision: nutrition, training, recovery, and every variable treated as data.'
+    icon: MessageCircle,
+    title: 'Trust The Team',
+    text: 'I relied on Coach Mo\'s experience, communicated honestly, and treated feedback and adjustments as part of the work.'
   },
   {
     icon: Trophy,
-    title: 'What It Meant',
-    text: 'Standing under the lights at Grandville High School validated a 20+ week silent battle built on structure, science, and suffering.'
+    title: 'Follow Through',
+    text: 'The lasting accomplishment was honoring the commitment—from the first decision through the final pose onstage.'
   }
 ];
 
 const timeline = [
   {
+    icon: Goal,
+    label: 'Choose The Goal',
+    text: 'The 2026 NPC Grand Rapids Championships gave the next chapter of my fitness journey a date and a clear standard.'
+  },
+  {
+    icon: CalendarDays,
+    label: 'Make The Plan',
+    text: 'We organized more than 20 weeks of bodybuilding prep around training, nutrition, cardio, posing, recovery, and check-ins.'
+  },
+  {
     icon: Dumbbell,
-    label: '20+ Week Prep',
-    text: 'Contest prep became a long, controlled build toward the 2026 NPC Grand Rapids Championships.'
+    label: 'Execute Daily',
+    text: 'The plan worked because the basic commitments were completed consistently, including on ordinary and demanding days.'
   },
   {
-    icon: ClipboardCheck,
-    label: 'Training Split',
-    text: 'High-intensity, data-tracked hypertrophy work focused on progressive overload while Coach Mo managed lean tissue retention.'
+    icon: MessageCircle,
+    label: 'Check In Honestly',
+    text: 'Progress photos, weight trends, recovery, and direct communication gave my coach the information needed to guide adjustments.'
   },
   {
-    icon: HeartPulse,
-    label: 'Cardio Changes',
-    text: 'Fasted steady-state cardio scaled upward as needed to break metabolic plateaus and sharpen conditioning.'
-  },
-  {
-    icon: Flame,
-    label: 'Peak Week',
-    text: 'Learning to manage water, sodium and how my body responds to the stress while tightening for the final look.'
-  },
-  {
-    icon: Zap,
-    label: 'Show Day',
-    text: 'May 23, 2026: Pro Tan, bands backstage, and the focus before walking out for True Novice, Masters, and Men\'s Open.'
+    icon: Brain,
+    label: 'Adapt The System',
+    text: 'We responded to results instead of forcing a fixed script. Coachability and continual adjustment kept the project moving.'
   },
   {
     icon: Medal,
-    label: 'First Benchmark',
-    text: 'The stage became the first real standard for the next version: more thickness, better shape, and smarter execution.'
+    label: 'Finish Together',
+    text: 'On May 23, 2026, we reached the NPC stage. The competition day was the visible result of months of shared work.'
   }
 ];
 
@@ -98,96 +92,57 @@ const gallery = [
   {
     title: 'Front Double Biceps',
     category: 'True Novice / Masters',
-    caption: 'Locking in the front double. Twenty weeks of posing drills finally clicking into place.',
+    caption: 'A pose shaped by months of practice, feedback, and small technical adjustments.',
     image: '/assets/show/badge1-solo-front-double.jpg'
   },
   {
     title: 'Side Chest',
     category: 'Prejudging Comparison',
-    caption: 'One of the strongest poses from the day: chest high, legs locked in, and the stage look starting to click.',
+    caption: 'Bringing the preparation together through composure, positioning, and presentation.',
     image: '/assets/show/badge1-solo-side-chest.jpg'
   },
   {
     title: 'Side Triceps',
     category: 'Prejudging Comparison',
-    caption: 'A tight side shot showing the triceps, shoulder, and oblique detail under the judges\' lights.',
+    caption: 'Applying the details practiced during prep under the judges\' lights.',
     image: '/assets/show/badge1-solo-side-triceps.jpg'
   },
   {
     title: 'Back Double Biceps',
     category: 'Rear Mandatory',
-    caption: 'Back details holding strong. Bringing the best possible package to my first NPC stage.',
+    caption: 'A first-show benchmark and a clear reference point for future improvement.',
     image: '/assets/show/badge1-solo-back-double.jpg'
   },
   {
     title: 'Most Muscular',
     category: 'Final Comparison',
-    caption: 'Pushing through the last callout with every detail squeezed out under the lights.',
+    caption: 'Staying present and completing the final comparison of my first competition.',
     image: '/assets/show/badge1-solo-most-muscular.jpg'
   },
   {
-    title: 'Side Profile',
-    category: 'Stage Presence',
-    caption: 'A first-show moment where the nerves settled and the work started speaking for itself.',
-    image: '/assets/show/badge1-solo-profile.jpg'
-  }
-];
-
-const behindScenes = [
-  { icon: Dumbbell, title: 'Pump Room', text: 'Minutes before walking out. Tuning out the noise and getting blood moving with bands and controlled focus.' },
-  { icon: Utensils, title: 'Meal Prep', text: 'The silent work: weighed chicken, jasmine rice math, supplement protocols, and zero missed meals.' },
-  { icon: Scale, title: 'Check-ins', text: 'Photos, weight trends, conditioning reads, and adjustments that kept the package moving in the right direction.' },
-  { icon: ClipboardCheck, title: 'Competitor Meeting', text: 'Sitting in the venue before show day, taking in the stage, the banners, and the reality that the first NPC weekend was here.' },
-  { icon: MessageCircle, title: 'Coach Mo', text: 'Huge gratitude to Coach Mo, a master of prep science who backed every adjustment with data.' },
-  {
-    icon: Sparkles,
-    title: 'Hair By Molly Young',
-    text: 'Molly Young did an amazing job getting the show-day hair dialed in before the final stretch of the weekend.',
-    href: 'https://www.instagram.com/hair_bymollyyoung/'
-  },
-  {
-    icon: Sparkles,
-    title: 'OneFitJoker Tanning',
-    text: 'Jermichael Pratt and the OneFitJoker Tanning team took great care of me on show day and helped bring the final look together.',
-    href: 'https://onefitjoker.com/'
-  },
-  { icon: Car, title: 'Road Trip', text: 'No flight, just the car ride to Grandville with the gear, meals, nerves, and show-day checklist packed in.' },
-  { icon: MapPin, title: 'Mike Vruggink', text: 'Great show by promoter Mike Vruggink, bringing the NPC Grand Rapids stage together with a professional athlete experience.' }
-];
-
-const journalPosts = [
-  {
-    title: 'First Show Recap',
-    kicker: 'The NPC Grand Rapids Championships',
-    text: 'Two days after stepping onto the NPC Grand Rapids stage, the experience still feels unmatched. Men\'s Open, Masters, and True Novice turned months of tracking, low-energy workdays, fatherhood, and quiet sacrifice into one finished product.'
-  },
-  {
-    title: 'Lessons From Prep',
-    kicker: 'The Science Of The Shred',
-    text: 'Bodybuilding became an optimization problem. Coming from competitive gaming and retail leadership, I treated prep like an N=1 study: carbohydrate timing, recovery markers, insulin sensitivity, and metabolic efficiency all had to earn their place.'
-  },
-  {
-    title: 'Post-Show Transition',
-    kicker: 'Rebuilding The Engine',
-    text: 'The tan is fading, but the work has not stopped. The next phase is controlled metabolic recovery, a structured reverse diet, and targeted growth without letting the post-show window turn into chaos.'
+    title: 'The Competition Stage',
+    category: 'Men’s Open Comparison',
+    caption: 'A wider view of the standard, the setting, and the competitors who shared the stage.',
+    image: '/assets/show/badge1-most-muscular.jpg',
+    format: 'wide'
   }
 ];
 
 const goals = [
   {
-    icon: Gauge,
-    title: 'Physique Improvements',
-    text: 'Build overall muscle thickness with special focus on back density and shoulder width to maximize the V-taper in Men\'s Open.'
+    icon: ClipboardCheck,
+    title: 'Structure Beats Motivation',
+    text: 'Motivation can begin a project. A clear system makes consistent execution possible after the excitement wears off.'
   },
   {
-    icon: Goal,
-    title: 'Offseason Priorities',
-    text: 'Restore baseline metabolic and hormone health, then move into a sustained surplus built for clean tissue accretion.'
+    icon: MessageCircle,
+    title: 'Accountability Accelerates Progress',
+    text: 'Honest check-ins, useful feedback, and great coaching improve decisions and keep ambitious goals grounded.'
   },
   {
     icon: HeartPulse,
-    title: 'Nutrition & Recovery',
-    text: 'Keep the focus on cellular optimization, gut health, sleep hygiene, and precise protocols that support nutrient partitioning.'
+    title: 'Health Comes Before Performance',
+    text: 'Long-term progress requires paying attention, seeking answers when something feels wrong, and making health the priority.'
   }
 ];
 
@@ -226,20 +181,19 @@ function Hero() {
       </div>
       <div className="hero-content">
         <h1>
-          From First Prep
-          <span>To First Stage</span>
+          From 100 Pounds Down
+          <span>To The NPC Stage</span>
         </h1>
         <div className="pulse-line" aria-hidden="true" />
         <p>
-          20 years in pet retail management, a lifetime in competitive gaming, and 20+ weeks of
-          relentless execution to transition from the desk to the NPC Masters and Men&apos;s Open stage.
+          The story of transformation, disciplined execution, teamwork, and finishing what I started.
         </p>
         <div className="hero-actions">
-          <a className="button primary" href="#story">My Story</a>
+          <a className="button primary" href="#transformation">Read My Story</a>
           <a className="button secondary" href="#gallery">View Gallery</a>
         </div>
       </div>
-      <a className="scroll-cue" href="#story" aria-label="Scroll to my story">
+      <a className="scroll-cue" href="#transformation" aria-label="Scroll to my story">
         <ArrowRight aria-hidden="true" />
       </a>
     </section>
@@ -248,25 +202,26 @@ function Hero() {
 
 function Story() {
   return (
-    <section className="band story" id="story">
+    <section className="band story" id="transformation">
       <div className="section-copy">
-        <SectionHeader title="My Story" />
+        <SectionHeader title="A Transformation, Then A Question" />
         <p className="lead">
-          This was not a bucket-list item. It was a 20+ week test of discipline, fatherhood,
-          leadership, and data-driven execution.
+          Losing more than 100 pounds changed my health, my confidence, and the direction of my life.
+          It also left me with a new question: What am I capable of next?
         </p>
         <p>
-          Before prep, training was a passion layered into a life built around managing a busy Pet
-          Supplies Plus store and being a father to my 11-year-old daughter, Chelsea. Prep changed
-          the entire operating system: every meal, check-in, cardio session, and posing drill became
-          part of a controlled experiment.
+          That weight loss transformation was built gradually. Better choices became habits, habits
+          became a system, and the system produced a personal transformation I once would not have
+          believed possible. I did not want the next goal to be a temporary challenge or a
+          bucket-list item. I wanted something meaningful enough to test what those habits could
+          support.
         </p>
         <p>
-          My background as a former professional cyberathlete shaped the approach. I treated
-          bodybuilding like competitive strategy in physical form, using precision, metabolic
-          efficiency, and repeatable execution instead of guesswork.
+          I set my sights on an NPC bodybuilding competition. The stage would be the visible
+          destination, but the real measure of success would be the work completed during the months
+          before it.
         </p>
-        <a className="button secondary compact" href="#journal">Read the Journal</a>
+        <a className="button secondary compact" href="#process">See The Process</a>
       </div>
       <div className="pillar-grid">
         {storyPillars.map(({ icon: Icon, title, text }) => (
@@ -283,8 +238,25 @@ function Story() {
 
 function PrepTimeline() {
   return (
-    <section className="band timeline-section" id="timeline">
-      <SectionHeader title="Prep Timeline" />
+    <section className="band timeline-section" id="process">
+      <SectionHeader title="Choosing The Goal & Building The Process" />
+      <div className="section-intro">
+        <p className="lead">
+          I chose the 2026 NPC Grand Rapids Championships because it demanded a real commitment:
+          more than 20 weeks of planning, accountability, consistent execution, and trust.
+        </p>
+        <p>
+          Preparation became a structured project. Coach Mo provided the experience and outside
+          perspective; my job was to communicate honestly and complete the work. We adjusted
+          training, food, cardio, posing, and recovery as the data and my progress required.
+        </p>
+        <p>
+          I also had to make the plan fit real life. Throughout prep, I continued leading at work,
+          being present as a father, and handling the everyday responsibilities that did not pause
+          because I had chosen a difficult fitness goal. That balance made reliability—not physical
+          hardship—the defining part of the process.
+        </p>
+      </div>
       <div className="timeline">
         {timeline.map(({ icon: Icon, label, text }) => (
           <article className="timeline-item" key={label}>
@@ -300,10 +272,78 @@ function PrepTimeline() {
   );
 }
 
-function GalleryCard({ item }) {
-  const { title, category, caption, image } = item;
+function UnexpectedChallenge() {
   return (
-    <figure className="gallery-card">
+    <section className="band challenge" id="challenge">
+      <SectionHeader title="An Unexpected Challenge" />
+      <div className="challenge-layout">
+        <article>
+          <p className="lead">
+            I entered prep in the best health of my life, with no indication that an underlying
+            medical issue was developing.
+          </p>
+          <p>
+            Late in prep, posing became unusually difficult. During the final weeks I was far more
+            fatigued and short of breath than expected, but we did not yet know why. On competition
+            day, my heart rate spiked and even walking around the venue became difficult.
+          </p>
+          <p>
+            I completed the competition and stepped onstage in True Novice, Masters, and Men&apos;s
+            Open. Because the experience did not feel consistent with ordinary contest fatigue, I
+            arranged bloodwork. Two days after the show, the results identified an underlying issue
+            that explained what I had been experiencing.
+          </p>
+          <p>
+            That information is context, not an excuse. It reinforced a lesson more important than
+            any placing: discipline also means listening to your body, seeking answers, and taking
+            responsibility for your health. Performance matters, but long-term health comes first.
+          </p>
+        </article>
+        <aside className="challenge-summary" aria-label="How I responded">
+          <span>How I Responded</span>
+          <strong>Paid attention when the experience felt wrong.</strong>
+          <strong>Sought objective answers through bloodwork.</strong>
+          <strong>Put health and recovery ahead of the next performance goal.</strong>
+        </aside>
+      </div>
+    </section>
+  );
+}
+
+function Meaning() {
+  return (
+    <section className="band meaning" id="meaning">
+      <SectionHeader title="More Than A Competition" />
+      <div className="meaning-layout">
+        <p className="meaning-statement">
+          We made it to the stage—but the stage was never the whole story.
+        </p>
+        <div className="section-copy">
+          <p>
+            Stepping under the lights represented losing more than 100 pounds, years of habit
+            building, trusting a coach, accepting accountability, and keeping promises to myself
+            when no one else was watching.
+          </p>
+          <p>
+            I am proud that I competed, but the accomplishment I value most is completing what I
+            committed to. The placing was one result from one day. Following the plan through the
+            full preparation showed me something more lasting about my character.
+          </p>
+          <p>
+            This bodybuilding competition became evidence that ambitious goals can coexist with
+            leadership, parenting, work, and everyday responsibility when the plan is clear and the
+            commitment is genuine.
+          </p>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function GalleryCard({ item }) {
+  const { title, category, caption, image, format } = item;
+  return (
+    <figure className={`gallery-card${format === 'wide' ? ' gallery-card--wide' : ''}`}>
       <img src={image} alt={`${title} - ${category}`} loading="lazy" />
       <figcaption>
         <strong>{title}</strong>
@@ -327,29 +367,10 @@ function Gallery() {
   );
 }
 
-function Journal() {
-  return (
-    <section className="band journal" id="journal">
-      <SectionHeader title="Journal" />
-      <div className="journal-grid">
-        {journalPosts.map(({ title, kicker, text }, index) => (
-          <article className="journal-card" key={title}>
-            <CalendarDays size={30} aria-hidden="true" />
-            <span>Entry 0{index + 1}</span>
-            <h3>{title}</h3>
-            <h4>{kicker}</h4>
-            <p>{text}</p>
-          </article>
-        ))}
-      </div>
-    </section>
-  );
-}
-
 function Goals() {
   return (
-    <section className="band goals" id="goals">
-      <SectionHeader title="Future Goals" />
+    <section className="band goals" id="lessons">
+      <SectionHeader title="Lessons That Extend Beyond Fitness" />
       <div className="goal-grid">
         {goals.map(({ icon: Icon, title, text }) => (
           <article className="goal-item" key={title}>
@@ -373,21 +394,22 @@ function Bio() {
         <article>
           <h3>Chris Brennan</h3>
           <p className="lead">
-            Chris Brennan is a competitive NPC bodybuilder, former professional cyberathlete, and
-            veteran pet retail manager based in Portage, Michigan.
+            Chris Brennan is a retail leader, father, former professional cyberathlete, and NPC
+            bodybuilding competitor based in Portage, Michigan.
           </p>
           <p>
-            For over two decades, Chris has operated in high-execution environments. As a veteran
-            store manager at Pet Supplies Plus, he has mastered operational efficiency, leadership,
-            and logistical execution. Long before stepping onto the bodybuilding stage, he honed his
-            competitive drive in the digital arena, learning that elite performance requires
-            obsession, analysis, and acute attention to detail.
+            For more than two decades, Chris has led in high-accountability retail environments.
+            His approach is practical: define the goal, build the system, communicate clearly, make
+            adjustments, and follow through. His earlier career in professional esports and his
+            personal health journey both reinforced the value of preparation, teamwork, and calm
+            execution.
           </p>
           <p>
-            At age 41, Chris transitioned that competitive framework into a grueling 20+ week
-            contest preparation for his debut at the 2026 NPC Grand Rapids Championships. He balances
-            that pursuit with his most important role: being a dedicated father to Chelsea, who was
-            there for one of the most meaningful moments of the weekend.
+            Bodybuilding was never the destination. It became one of the clearest demonstrations of
+            the person Chris strives to be: someone who embraces difficult goals, trusts the
+            process, values coaching, adapts when challenges arise, and follows through on
+            commitments. Those principles continue to shape how he leads, how he parents, and how he
+            supports others pursuing meaningful change.
           </p>
         </article>
         <aside className="credits">
@@ -450,7 +472,7 @@ function Contact() {
     <footer className="site-footer" id="contact">
       <div>
         <BrandLogo />
-        <p>Documentary, polished, dark, and high contrast. The gritty reality of the sport, presented with data-driven professionalism.</p>
+        <p>A personal record of transformation, teamwork, health, and the commitments that shape how I lead.</p>
       </div>
       <div>
         <h2>Let&apos;s Connect</h2>
@@ -463,8 +485,8 @@ function Contact() {
         </ul>
       </div>
       <div>
-        <h2>Collaborations</h2>
-        <p>Open to content partnerships, scientifically sound supplement and apparel sponsorships, and tech or biohacking collaborations.</p>
+        <h2>Work With Me</h2>
+        <p>Open to thoughtful professional conversations, partnerships, and opportunities to help others build sustainable change through structure and accountability.</p>
         <a className="button secondary compact" href="mailto:cbrennan2120@gmail.com">Work With Me</a>
       </div>
     </footer>
@@ -488,8 +510,9 @@ function App() {
         <Hero />
         <Story />
         <PrepTimeline />
+        <UnexpectedChallenge />
+        <Meaning />
         <Gallery />
-        <Journal />
         <Goals />
         <Bio />
       </main>

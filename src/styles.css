@@ -179,32 +179,105 @@ a {
     0 0 0 1px rgba(215, 180, 124, 0.25);
 }
 
-.hero-frame picture,
-.hero-frame img {
+.hero-frame picture {
   display: block;
   width: 100%;
 }
 
 .hero-frame img {
+  display: block;
+  width: auto;
+  max-width: 100%;
   height: auto;
   max-height: 78vh;
+  margin-inline: auto;
   object-fit: contain;
   background: #000;
 }
 
-.engineer-hotspot {
+.hero-art-copy {
   position: absolute;
   z-index: 3;
+  inset: 0;
+  pointer-events: none;
+}
+
+.hero-art-label {
+  position: absolute;
+  top: 7.3%;
+  left: 42%;
+  right: 19%;
+  color: #24190f;
+  font-family: var(--heading);
+  font-size: clamp(0.56rem, 1.75vw, 1.65rem);
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  line-height: 1;
+  text-align: center;
+  text-shadow: 0 1px 0 rgba(255, 231, 181, 0.35);
+  text-transform: uppercase;
+}
+
+.hero-art-message {
+  position: absolute;
+  top: 23%;
+  right: 5.5%;
+  bottom: 24%;
+  left: 35%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #f1dfbc;
+  font-family: var(--heading);
+  font-size: clamp(1.05rem, 4.2vw, 4.25rem);
+  letter-spacing: -0.025em;
+  line-height: 0.96;
+  text-align: center;
+  text-shadow: 0 4px 0 #0a0f12, 0 9px 24px rgba(0, 0, 0, 0.72);
+  text-transform: uppercase;
+}
+
+.hero-art-message em {
+  margin-top: 0.45em;
+  color: var(--terminal);
+  font-family: var(--mono);
+  font-size: 0.39em;
+  font-style: normal;
+  letter-spacing: 0.1em;
+  line-height: 1.25;
+  text-shadow: 0 0 16px rgba(154, 219, 66, 0.28);
+}
+
+.hero-art-domain {
+  position: absolute;
+  right: 20%;
+  bottom: 14.6%;
+  left: 56%;
+  color: #24190f;
+  font-family: var(--heading);
+  font-size: clamp(0.5rem, 1.3vw, 1.12rem);
+  font-weight: 900;
+  letter-spacing: 0.05em;
+  line-height: 1;
+  text-align: center;
+  text-shadow: 0 1px 0 rgba(255, 231, 181, 0.35);
+  text-transform: uppercase;
+}
+
+.career-hotspot {
+  position: absolute;
+  z-index: 4;
   top: 5%;
   left: 1.6%;
-  width: 27%;
-  height: 51%;
+  width: 31%;
+  height: 68%;
   border: 2px dashed transparent;
   border-radius: 12% 18% 10% 12%;
   transition: border-color 160ms ease, background-color 160ms ease, box-shadow 160ms ease;
 }
 
-.engineer-hotspot span {
+.career-hotspot span {
   position: absolute;
   left: 50%;
   bottom: 2%;
@@ -223,16 +296,16 @@ a {
   opacity: 0.9;
 }
 
-.engineer-hotspot:hover,
-.engineer-hotspot:focus-visible {
+.career-hotspot:hover,
+.career-hotspot:focus-visible {
   border-color: var(--terminal);
   background: rgba(154, 219, 66, 0.08);
   box-shadow: inset 0 0 24px rgba(154, 219, 66, 0.25), 0 0 16px rgba(154, 219, 66, 0.35);
   outline: none;
 }
 
-.engineer-hotspot:hover span,
-.engineer-hotspot:focus-visible span {
+.career-hotspot:hover span,
+.career-hotspot:focus-visible span {
   opacity: 1;
 }
 
@@ -273,6 +346,30 @@ a {
     linear-gradient(135deg, rgba(151, 210, 61, 0.04), transparent 40%),
     var(--steel-deep);
   box-shadow: inset 0 0 28px rgba(0, 0, 0, 0.7), 0 12px 30px rgba(0, 0, 0, 0.35);
+}
+
+.professional-title {
+  grid-column: 1 / -1;
+  margin: 0;
+  padding-bottom: clamp(1rem, 2vw, 1.4rem);
+  border-bottom: 1px solid rgba(181, 135, 80, 0.32);
+  color: #f4ead8;
+  font-family: var(--heading);
+  font-size: clamp(1.8rem, 4vw, 3.4rem);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  text-wrap: balance;
+}
+
+.professional-title span {
+  display: block;
+  margin-bottom: 0.45rem;
+  color: var(--terminal);
+  font-family: var(--mono);
+  font-size: clamp(0.78rem, 1.4vw, 0.98rem);
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
 }
 
 .terminal-copy {
@@ -479,6 +576,54 @@ a {
 
 .animals-portal .macros-copy .eyebrow {
   color: #f49a5d;
+}
+
+.esports-portal {
+  border-color: #416b8f;
+  border-left-color: #70c6ff;
+  background:
+    radial-gradient(circle at 12% 35%, rgba(82, 180, 255, 0.18), transparent 29%),
+    repeating-linear-gradient(120deg, rgba(255, 255, 255, 0.025) 0 1px, transparent 1px 19px),
+    linear-gradient(135deg, #142b3b, #0f1922 58%, #171227);
+}
+
+.esports-portal::before {
+  background: repeating-linear-gradient(135deg, #70c6ff 0 16px, #98dc56 16px 30px);
+}
+
+.esports-portal:hover,
+.esports-portal:focus-visible {
+  border-left-color: #70c6ff;
+}
+
+.esports-portal .macros-copy .eyebrow {
+  color: #70c6ff;
+}
+
+.esports-portal .macros-launch {
+  color: #07131c;
+  border-color: #b9e7ff;
+  background: linear-gradient(#8ed7ff, #479fd0);
+  box-shadow: 3px 4px 0 #17384b;
+}
+
+.esports-icon {
+  position: relative;
+  width: clamp(108px, 13vw, 148px);
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  border: 3px solid #a6dcfa;
+  background: #0b1923;
+  box-shadow: inset 0 0 0 3px rgba(255, 255, 255, 0.1), 5px 6px 0 #050705;
+  clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px);
+  transform: rotate(-2deg);
+}
+
+.esports-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
 .macros-icon {
@@ -1001,6 +1146,10 @@ footer {
     width: 68px;
   }
 
+  .esports-icon {
+    width: 86px;
+  }
+
   .macros-copy strong {
     font-size: clamp(1.65rem, 8vw, 2.2rem);
   }
@@ -1015,7 +1164,7 @@ footer {
     border-right-width: 4px;
   }
 
-  .engineer-hotspot span {
+  .career-hotspot span {
     bottom: -1%;
     padding: 0.24rem 0.34rem;
     box-shadow: 2px 2px 0 #111;

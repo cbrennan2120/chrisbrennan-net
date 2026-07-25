@@ -27,7 +27,7 @@ html {
 
 body {
   margin: 0;
-  min-width: 320px;
+  min-width: 0;
   background:
     radial-gradient(circle at 20% 0%, rgba(92, 245, 216, 0.1), transparent 34rem),
     linear-gradient(180deg, #09141b 0%, var(--bg) 42%, #071117 100%);
@@ -337,6 +337,17 @@ h1 span {
   font-weight: 800;
 }
 
+.section-intro {
+  max-width: 76rem;
+  margin: -0.35rem 0 3rem;
+}
+
+.section-intro p {
+  max-width: 69rem;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
 .pillar-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -404,32 +415,95 @@ h1 span {
   box-shadow: 0 0 20px rgba(92, 245, 216, 0.18);
 }
 
+.challenge {
+  background:
+    linear-gradient(110deg, rgba(135, 164, 255, 0.06), transparent 54%),
+    #08131a;
+}
+
+.challenge-layout,
+.meaning-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(280px, 0.75fr);
+  gap: clamp(2rem, 6vw, 5rem);
+  align-items: start;
+}
+
+.challenge-layout article p,
+.meaning-layout p {
+  color: var(--muted);
+  line-height: 1.75;
+}
+
+.challenge-summary {
+  display: grid;
+  gap: 0;
+  border-top: 2px solid var(--mint);
+}
+
+.challenge-summary span {
+  padding: 1rem 0;
+  color: var(--blue);
+  font-size: 0.72rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.challenge-summary strong {
+  padding: 1rem 0;
+  border-top: 1px solid var(--line);
+  color: var(--text);
+  line-height: 1.45;
+}
+
+.meaning {
+  background: linear-gradient(90deg, rgba(92, 245, 216, 0.045), transparent);
+}
+
+.meaning-layout {
+  grid-template-columns: minmax(280px, 0.75fr) minmax(0, 1.25fr);
+}
+
+.meaning-statement {
+  margin: 0;
+  color: var(--text) !important;
+  font-family: "Arial Narrow", "Roboto Condensed", Impact, sans-serif;
+  font-size: clamp(2rem, 5vw, 4.5rem);
+  font-weight: 950;
+  line-height: 0.98 !important;
+  letter-spacing: -0.035em;
+  text-transform: uppercase;
+}
+
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1rem;
 }
 
-.gallery-grid.gallery-count-5 {
+.gallery-grid.gallery-count-6 {
   grid-template-columns: repeat(6, minmax(0, 1fr));
 }
 
-.gallery-grid.gallery-count-5 .gallery-card {
+.gallery-grid.gallery-count-6 .gallery-card {
   grid-column: span 2;
 }
 
-.gallery-grid.gallery-count-5 .gallery-card:nth-child(4) {
+.gallery-grid.gallery-count-6 .gallery-card:nth-child(4) {
   grid-column: 2 / span 2;
 }
 
-.gallery-grid.gallery-count-5 .gallery-card:nth-child(5) {
+.gallery-grid.gallery-count-6 .gallery-card:nth-child(5) {
   grid-column: 4 / span 2;
+}
+
+.gallery-grid.gallery-count-6 .gallery-card--wide {
+  grid-column: 1 / -1;
 }
 
 .gallery-card {
   position: relative;
   margin: 0;
-  overflow: hidden;
   border: 1px solid rgba(148, 182, 193, 0.2);
   background: #071219;
 }
@@ -442,6 +516,12 @@ h1 span {
   object-fit: cover;
   object-position: center top;
   background: #050d12;
+  filter: saturate(0.96) contrast(1.04);
+}
+
+.gallery-card--wide img {
+  aspect-ratio: 16 / 7;
+  object-position: center 42%;
 }
 
 .placeholder {
@@ -469,19 +549,10 @@ h1 span {
 }
 
 .gallery-card figcaption {
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  min-height: 154px;
   padding: 1.1rem;
-  background: linear-gradient(180deg, transparent, rgba(4, 10, 14, 0.92) 18%);
-  transform: none;
-  transition: transform 180ms ease;
-}
-
-.gallery-card:hover figcaption,
-.gallery-card:focus-within figcaption {
-  transform: translateY(0);
+  border-top: 1px solid rgba(148, 182, 193, 0.16);
+  background: linear-gradient(180deg, rgba(14, 31, 41, 0.98), rgba(7, 18, 25, 0.98));
 }
 
 .gallery-card strong {
@@ -688,6 +759,8 @@ h1 span {
   }
 
   .story,
+  .challenge-layout,
+  .meaning-layout,
   .bio-layout,
   .site-footer {
     grid-template-columns: 1fr;
@@ -746,8 +819,15 @@ h1 span {
     grid-template-columns: 1fr;
   }
 
-  .gallery-grid.gallery-count-5 .gallery-card {
+  .gallery-grid.gallery-count-6 .gallery-card,
+  .gallery-grid.gallery-count-6 .gallery-card:nth-child(4),
+  .gallery-grid.gallery-count-6 .gallery-card:nth-child(5),
+  .gallery-grid.gallery-count-6 .gallery-card--wide {
     grid-column: auto;
+  }
+
+  .gallery-grid.gallery-count-6 {
+    grid-template-columns: 1fr;
   }
 
   h1 {
@@ -772,6 +852,14 @@ h1 span {
 
   .gallery-card img {
     aspect-ratio: 4 / 5;
+  }
+
+  .gallery-card--wide img {
+    aspect-ratio: 16 / 10;
+  }
+
+  .gallery-card figcaption {
+    min-height: auto;
   }
 }
 
