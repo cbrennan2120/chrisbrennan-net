@@ -73,22 +73,13 @@ function Centerpiece() {
         <Bolt className="bolt-br" />
         <picture>
           <img
-            src="/assets/chrisspace-main-v3.png"
-            alt="Retro-industrial illustration of a team leader surrounded by symbols for people, animals, practical tools, retail, and fitness."
+            src="/assets/chrisspace-main.png"
+            alt="Welcome to ChrisSpace 2.0. Chris Brennan builds useful things, helps animals, gets strong, and has fun."
             width="1536"
             height="1024"
             fetchPriority="high"
           />
         </picture>
-        <div className="hero-art-copy" aria-hidden="true">
-          <span className="hero-art-label">ChrisSpace 2.0</span>
-          <strong className="hero-art-message">
-            <span>Lead Teams.</span>
-            <span>Build Systems.</span>
-            <em>Strengthen Communities.</em>
-          </strong>
-          <span className="hero-art-domain">ChrisBrennan.Net</span>
-        </div>
         <a
           className="career-hotspot"
           href="/esports/"
