@@ -147,11 +147,11 @@ function CurrentPlanPortal() {
         <Dumbbell />
       </span>
       <span className="macros-copy">
-        <small className="eyebrow">Training in real life</small>
-        <strong id="macros-title">The Current Plan</strong>
+        <small className="eyebrow">My Current Plan</small>
+        <strong id="macros-title">6-Day Push / Pull / Legs</strong>
         <span>
-          My current meal plan and alternating workout split, organized around family weeks, work,
-          and recovery.
+          My current hypertrophy split with exercise order, sets, rep targets, rest periods,
+          weekly volume, and the meal plan I am running now.
         </span>
         <span className="macros-tags" aria-hidden="true">
           <i>Meal plan</i>
