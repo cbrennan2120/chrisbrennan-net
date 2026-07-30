@@ -79,40 +79,61 @@ function Header() {
 function Centerpiece() {
   return (
     <section className="hero" id="top" aria-labelledby="hero-title">
-      <h1 id="hero-title" className="sr-only">Welcome to ChrisSpace 2.0</h1>
       <div className="hero-frame">
         <Bolt className="bolt-tl" />
         <Bolt className="bolt-tr" />
         <Bolt className="bolt-bl" />
         <Bolt className="bolt-br" />
         <picture>
+          <source
+            media="(max-width: 620px)"
+            srcSet="/assets/chrisspace-hero-michigan-mobile.png"
+          />
           <img
-            src="/assets/chrisspace-main.png"
-            alt="Welcome to ChrisSpace 2.0. Chris Brennan builds useful things, helps animals, gets strong, and has fun."
-            width="1536"
-            height="1024"
+            src="/assets/chrisspace-hero-michigan-desktop.png"
+            alt="A Michigan field guide collage featuring a CB compass badge, a dog and cat, a field notebook, tools, and a kettlebell."
+            width="1600"
+            height="720"
             fetchPriority="high"
           />
         </picture>
+        <div className="hero-shade" aria-hidden="true" />
+        <div className="hero-copy">
+          <span className="hero-eyebrow">Portage, Michigan // Leadership in practice</span>
+          <h1 id="hero-title">Chris Brennan</h1>
+          <p className="hero-lede">
+            Retail operations leader. Builder of practical tools.
+            <br />
+            Animal advocate. Lifelong competitor.
+          </p>
+          <p className="hero-motto">Lead teams. Solve real problems. Keep showing up.</p>
+          <div className="hero-actions">
+            <a className="hero-action hero-action-primary" href="#projects">
+              Explore my work
+            </a>
+            <a
+              className="hero-action hero-action-secondary"
+              href="https://plan.chrisbrennan.net/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Current plan
+            </a>
+          </div>
+        </div>
         <a
-          className="engineer-hotspot"
+          className="cb-hotspot"
           href="/esports/"
-          aria-label="Open Chris Brennan's st1ckg0d esports career history"
-        >
-          <span aria-hidden="true">PLAYER 1 // ESPORTS BIO</span>
-        </a>
+          aria-label="Open Chris Brennan's esports career archive"
+          title="Esports archive"
+        />
       </div>
       <div className="mission-panel">
         <div className="terminal-copy">
           <span className="prompt" aria-hidden="true">&gt;</span>
-          <p>Build useful things. Help animals. Build yourself in real life.</p>
-          <span className="cursor" aria-hidden="true" />
+          <strong>System status</strong>
         </div>
-        <p className="intro-copy">
-          Chris Brennan is a Michigan-based retail leader, builder of practical tools, dad, animal
-          advocate, and lifelong competitor. He leads teams, solves real problems, and keeps showing
-          up when life gets complicated.
-        </p>
+        <p className="mission-copy">Build useful things. Help animals. Build yourself in real life.</p>
       </div>
     </section>
   );
@@ -175,7 +196,7 @@ function CurrentPlanPortal() {
 
 function Projects() {
   return (
-    <section className="project-bay" aria-labelledby="projects-title">
+    <section className="project-bay" id="projects" aria-labelledby="projects-title">
       <h2 id="projects-title">My Projects</h2>
       <div className="project-grid">
         <a
