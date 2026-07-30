@@ -6,6 +6,7 @@ import {
   Dumbbell,
   Facebook,
   Instagram,
+  Linkedin,
   Mail,
   Music2,
   Wrench,
@@ -44,6 +45,12 @@ const socialLinks = [
     handle: 'Chris Adam Brennan',
     href: 'https://www.facebook.com/ChrisAdamBrennan',
     icon: Facebook
+  },
+  {
+    label: 'LinkedIn',
+    handle: 'Chris Brennan',
+    href: 'https://www.linkedin.com/in/chris-brennan-38b27486',
+    icon: Linkedin
   }
 ];
 
