@@ -711,9 +711,6 @@ a {
   transition: transform 160ms ease, border-color 160ms ease, box-shadow 160ms ease;
 }
 
-.social-card:nth-child(4) { grid-column: 2 / span 2; }
-.social-card:nth-child(5) { grid-column: 4 / span 2; }
-
 .social-card::after {
   content: '';
   position: absolute;
@@ -879,14 +876,8 @@ footer {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .social-card,
-  .social-card:nth-child(4),
-  .social-card:nth-child(5) {
+  .social-card {
     grid-column: auto;
-  }
-
-  .social-card:last-child {
-    grid-column: 1 / -1;
   }
 }
 
