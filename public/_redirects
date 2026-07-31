@@ -1,0 +1,7 @@
+/resume /resume/ 301
+/resume/* /resume-site/:splat 200!
+/bodybuilding /bodybuilding/ 301
+/bodybuilding/* /bodybuilding/index.html 200
+/esports /esports/ 301
+/esports/* /esports/index.html 200
+/* /index.html 200
