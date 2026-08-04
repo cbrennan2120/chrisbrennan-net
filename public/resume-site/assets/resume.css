@@ -392,6 +392,15 @@ h1 {
   letter-spacing: -0.035em;
 }
 
+.role-scope {
+  margin: 0.35rem 0 0;
+  color: var(--orange-dark);
+  font-size: 0.76rem;
+  font-weight: 850;
+  letter-spacing: 0.055em;
+  text-transform: uppercase;
+}
+
 .role-meta,
 .side-meta {
   margin: 0;
@@ -404,6 +413,30 @@ h1 {
 .role li,
 .role > p {
   color: var(--ink-soft);
+}
+
+.impact-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.impact-grid article {
+  border: 1px solid var(--line);
+  border-radius: 7px;
+  background: rgba(255, 253, 248, 0.66);
+  padding: 1.3rem;
+}
+
+.impact-grid h3 {
+  margin: 0 0 0.65rem;
+  font-size: 1rem;
+}
+
+.impact-grid p {
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: 0.86rem;
 }
 
 .recognition-grid {
@@ -459,6 +492,12 @@ h1 {
   padding: 0.38rem 0.68rem;
   font-size: 0.73rem;
   font-weight: 720;
+}
+
+.digital-summary {
+  margin: 1rem 0 0;
+  color: var(--ink-soft);
+  font-size: 0.86rem;
 }
 
 .side-kicker {
@@ -619,6 +658,7 @@ footer a {
     padding-left: 1rem;
   }
 
+  .impact-grid,
   .recognition-grid,
   .secondary-column {
     grid-template-columns: 1fr;
